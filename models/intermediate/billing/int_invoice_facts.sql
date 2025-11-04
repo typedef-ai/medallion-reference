@@ -1,0 +1,10 @@
+-- Stripe invoice aggregation
+select
+    invoice_id,
+    customer_id,
+    amount_due as invoice_amount_usd,
+    invoice_date,
+    last_day(invoice_date) as report_month,
+    paid,
+    status
+from {{ ref('stg_stripe__invoices') }}

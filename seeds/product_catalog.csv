@@ -1,0 +1,21 @@
+product_code,product_name,product_family,edition,list_price_annual,list_price_monthly,user_limit,data_limit_gb,features
+PROD-START-001,Starter Platform,License,Starter,1200,120,5,1,Basic Dashboards|Email Support
+PROD-PRO-001,Professional Platform,License,Professional,6000,600,25,10,Advanced Analytics|Chat Support|API Access
+PROD-ENT-001,Enterprise Platform,License,Enterprise,15000,1500,999999,100,Custom Integrations|Phone Support|SSO|Advanced Security
+PROD-ENT-002,Enterprise Plus Platform,License,Enterprise Plus,30000,3000,999999,999999,White Label|Dedicated CSM|SLA|Priority Support
+PROD-MID-001,Professional Plus,License,Professional,8000,800,50,25,Professional + Enhanced Analytics
+PROD-MID-002,Professional Premium,License,Professional,10000,1000,75,50,Professional + ML Models
+PROD-MID-003,Professional Elite,License,Professional,12000,1200,100,75,Professional + All Features
+PROD-SMB-001,Starter Plus,License,Starter,1800,180,10,2,Starter + Chat Support
+PROD-SMB-002,Starter Premium,License,Starter,2400,240,15,5,Starter + Basic Analytics
+PROD-ENT-003,Enterprise Premium,License,Enterprise,25000,2500,999999,500,Enterprise + Advanced ML|Data Governance
+PROD-ANALYTICS-001,Advanced Analytics Module,Add-on,Professional,3600,360,0,0,Predictive Analytics|ML Models|Forecasting
+PROD-API-001,API Access Module,Add-on,Professional,2400,240,0,0,REST API|Webhooks|SDK
+PROD-WL-001,White Label Module,Add-on,Enterprise,12000,1200,0,0,Custom Branding|Custom Domain
+PROD-SUPPORT-001,Premium Support,Add-on,Professional,5000,500,0,0,24/7 Support|1-hour SLA|Phone Support
+PROD-SUPPORT-002,Elite Support,Add-on,Enterprise,15000,1500,0,0,24/7 Support|30-min SLA|TAM|Onboarding
+PROD-TRAINING-001,Professional Services - Training,Services,Professional,2000,0,0,0,8 hours training|Documentation|Best Practices
+PROD-TRAINING-002,Professional Services - Implementation,Services,Enterprise,8000,0,0,0,40 hours implementation|Custom Setup|Migration
+PROD-CONSULT-001,Strategic Consulting,Services,Enterprise Plus,15000,0,0,0,80 hours consulting|Architecture Review|Optimization
+PROD-DATA-001,Data Capacity Add-on 100GB,Add-on,Professional,1200,120,0,100,Additional Data Storage
+PROD-DATA-002,Data Capacity Add-on 500GB,Add-on,Enterprise,4800,480,0,500,Additional Data Storage

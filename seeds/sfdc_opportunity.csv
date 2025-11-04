@@ -1,0 +1,301 @@
+opportunity_id,account_id,name,stage_name,forecast_category,is_won,is_closed,probability,amount,type,license_start_date,license_end_date,created_date,close_date,owner_id
+OPP001,ACC001,Acme Corp - New License,Closed Won,Commit,TRUE,TRUE,100,120000,New Subscription,2024-01-01,2024-12-31,2023-11-15,2023-12-28,OWN001
+OPP002,ACC003,GlobalTech - Enterprise Expansion,Closed Won,Commit,TRUE,TRUE,100,180000,Expansion,2024-02-01,2025-01-31,2024-01-05,2024-01-25,OWN002
+OPP003,ACC005,DataCorp - New Contract,Closed Won,Commit,TRUE,TRUE,100,60000,New Subscription,2024-03-01,2025-02-28,2024-02-10,2024-02-28,OWN001
+OPP004,ACC007,CloudNine - Renewal,Closed Won,Commit,TRUE,TRUE,100,90000,Renewal,2024-01-15,2025-01-14,2023-12-01,2024-01-10,OWN003
+OPP005,ACC009,FinServe - New Platform,Closed Won,Commit,TRUE,TRUE,100,240000,New Subscription,2024-04-01,2025-03-31,2024-02-20,2024-03-25,OWN002
+OPP006,ACC002,Acme East - Expansion,Closed Won,Commit,TRUE,TRUE,100,50000,Expansion,2024-05-01,2025-04-30,2024-04-01,2024-04-22,OWN001
+OPP007,ACC011,SecureBank - Enterprise License,Closed Won,Commit,TRUE,TRUE,100,300000,New Subscription,2024-06-01,2025-05-31,2024-04-15,2024-05-28,OWN003
+OPP008,ACC004,TechStart - SMB Package,Closed Won,Commit,TRUE,TRUE,100,24000,New Subscription,2024-02-15,2025-02-14,2024-01-20,2024-02-10,OWN002
+OPP009,ACC013,HealthCare - Analytics Module,Closed Won,Commit,TRUE,TRUE,100,75000,New Subscription,2024-03-15,2025-03-14,2024-02-25,2024-03-10,OWN001
+OPP010,ACC016,MediaStream - Renewal,Closed Won,Commit,TRUE,TRUE,100,110000,Renewal,2024-07-01,2025-06-30,2024-05-15,2024-06-20,OWN003
+OPP011,ACC018,AutoManufacture - Enterprise,Closed Won,Commit,TRUE,TRUE,100,200000,New Subscription,2024-08-01,2025-07-31,2024-06-10,2024-07-25,OWN002
+OPP012,ACC019,EnergyGrid - Expansion,Closed Won,Commit,TRUE,TRUE,100,150000,Expansion,2024-09-01,2025-08-31,2024-07-20,2024-08-28,OWN001
+OPP013,ACC006,GlobalTech Germany - Add-on,Closed Won,Commit,TRUE,TRUE,100,40000,Expansion,2024-04-15,2025-04-14,2024-03-10,2024-04-05,OWN002
+OPP014,ACC020,InsureTech - New License,Closed Won,Commit,TRUE,TRUE,100,85000,New Subscription,2024-10-01,2025-09-30,2024-08-15,2024-09-22,OWN003
+OPP015,ACC001,Acme Corp - Renewal,Negotiation/Review,Pipeline,FALSE,FALSE,70,125000,Renewal,2025-01-01,2025-12-31,2024-10-15,2024-12-31,OWN001
+OPP016,ACC008,RetailPro - New License,Proposal/Price Quote,Best Case,FALSE,FALSE,50,35000,New Subscription,2024-11-01,2025-10-31,2024-09-20,2024-11-15,OWN002
+OPP017,ACC010,MobileTech - SMB License,Qualification,Pipeline,FALSE,FALSE,30,18000,New Subscription,2024-12-01,2025-11-30,2024-10-05,2024-12-20,OWN001
+OPP018,ACC014,EduPlatform - New Contract,Proposal/Price Quote,Pipeline,FALSE,FALSE,60,42000,New Subscription,2025-01-15,2026-01-14,2024-11-01,2025-01-31,OWN003
+OPP019,ACC015,LogiChain - Expansion,Negotiation/Review,Best Case,FALSE,FALSE,75,95000,Expansion,2024-11-15,2025-11-14,2024-09-30,2024-12-15,OWN002
+OPP020,ACC017,AgriTech - New License,Qualification,Omitted,FALSE,FALSE,20,28000,New Subscription,2025-02-01,2026-01-31,2024-11-10,2025-02-28,OWN001
+OPP021,ACC003,GlobalTech - Q1 2025 Expansion,Proposal/Price Quote,Pipeline,FALSE,FALSE,65,220000,Expansion,2025-03-01,2026-02-28,2024-12-01,2025-03-31,OWN002
+OPP022,ACC012,Acme West - New Module,Closed Lost,Omitted,FALSE,TRUE,0,65000,Expansion,2024-06-01,2025-05-31,2024-04-10,2024-06-15,OWN001
+OPP023,ACC005,DataCorp - Add-on Services,Closed Lost,Omitted,FALSE,TRUE,0,22000,Expansion,2024-08-01,2025-07-31,2024-06-20,2024-08-10,OWN003
+OPP024,ACC007,CloudNine - Monthly Billing,Closed Won,Commit,TRUE,TRUE,100,7500,Monthly Billing,2024-03-01,2024-03-31,2024-02-15,2024-02-28,OWN002
+OPP025,ACC013,HealthCare - Renewal,Negotiation/Review,Commit,FALSE,FALSE,90,78000,Renewal,2025-03-15,2026-03-14,2024-12-10,2025-03-31,OWN001
+OPP026,ACC001,Acme Corporation - New Subscription,Negotiation/Review,Commit,False,False,90,148484,New Subscription,2025-01-20,2026-01-20,2023-02-15,2025-01-20,OWN002
+OPP027,ACC001,Acme Corporation - Expansion,Closed Won,Commit,True,True,100,120904,Expansion,2024-04-14,2025-04-14,2024-02-06,2024-03-31,OWN002
+OPP028,ACC001,Acme Corporation - Expansion,Negotiation/Review,Best Case,False,False,75,89102,Expansion,2024-11-04,2025-11-04,2024-06-17,2024-11-04,OWN003
+OPP029,ACC002,Acme East Division - New Subscription,Closed Won,Commit,True,True,100,183924,New Subscription,2023-04-14,2024-04-13,2023-02-05,2023-04-05,OWN001
+OPP030,ACC002,Acme East Division - Renewal,Proposal/Price Quote,Best Case,False,False,50,251459,Renewal,2024-12-07,2025-12-07,2023-02-26,2024-12-07,OWN002
+OPP031,ACC002,Acme East Division - Expansion,Negotiation/Review,Commit,False,False,90,41625,Expansion,2025-01-22,2026-01-22,2023-09-16,2025-01-22,OWN002
+OPP032,ACC002,Acme East Division - Renewal,Proposal/Price Quote,Pipeline,False,False,60,113868,Renewal,2024-11-29,2025-11-29,2023-12-31,2024-11-29,OWN001
+OPP033,ACC003,GlobalTech Inc - New Subscription,Negotiation/Review,Best Case,False,False,75,59534,New Subscription,2025-01-25,2026-01-25,2023-01-17,2025-01-25,OWN005
+OPP034,ACC003,GlobalTech Inc - Expansion,Negotiation/Review,Best Case,False,False,75,89378,Expansion,2025-02-09,2026-02-09,2022-11-18,2025-02-09,OWN005
+OPP035,ACC003,GlobalTech Inc - Expansion,Proposal/Price Quote,Pipeline,False,False,60,74915,Expansion,2024-10-27,2025-10-27,2023-07-12,2024-10-27,OWN004
+OPP036,ACC003,GlobalTech Inc - Expansion,Proposal/Price Quote,Pipeline,False,False,60,104686,Expansion,2025-01-18,2026-01-18,2023-04-16,2025-01-18,OWN002
+OPP037,ACC004,TechStart LLC - New Subscription,Closed Lost,Omitted,False,True,0,22438,New Subscription,2024-11-01,2025-11-01,2023-07-20,2023-08-18,OWN005
+OPP038,ACC005,DataCorp Solutions - New Subscription,Qualification,Omitted,False,False,20,23104,New Subscription,2024-12-17,2025-12-17,2023-09-25,2024-12-17,OWN004
+OPP039,ACC006,GlobalTech Germany - New Subscription,Negotiation/Review,Best Case,False,False,75,191740,New Subscription,2024-11-05,2025-11-05,2023-01-11,2024-11-05,OWN003
+OPP040,ACC006,GlobalTech Germany - Expansion,Negotiation/Review,Best Case,False,False,75,26745,Expansion,2024-12-27,2025-12-27,2024-03-21,2024-12-27,OWN001
+OPP041,ACC006,GlobalTech Germany - Renewal,Proposal/Price Quote,Best Case,False,False,50,297276,Renewal,2024-11-16,2025-11-16,2023-02-24,2024-11-16,OWN002
+OPP042,ACC007,CloudNine Systems - New Subscription,Proposal/Price Quote,Best Case,False,False,50,62952,New Subscription,2024-11-15,2025-11-15,2023-04-02,2024-11-15,OWN004
+OPP043,ACC008,RetailPro Limited - New Subscription,Negotiation/Review,Commit,False,False,90,22455,New Subscription,2024-12-06,2025-12-06,2023-12-07,2024-12-06,OWN003
+OPP044,ACC009,FinServe Group - New Subscription,Proposal/Price Quote,Pipeline,False,False,60,241782,New Subscription,2024-12-03,2025-12-03,2024-07-16,2024-12-03,OWN003
+OPP045,ACC009,FinServe Group - Expansion,Negotiation/Review,Commit,False,False,90,25722,Expansion,2024-11-03,2025-11-03,2022-12-10,2024-11-03,OWN004
+OPP046,ACC009,FinServe Group - Expansion,Qualification,Pipeline,False,False,30,82762,Expansion,2024-11-23,2025-11-23,2024-04-11,2024-11-23,OWN004
+OPP047,ACC010,MobileTech Partners - New Subscription,Closed Lost,Omitted,False,True,0,6115,New Subscription,2024-11-01,2025-11-01,2023-08-17,2023-09-13,OWN003
+OPP048,ACC011,SecureBank AG - New Subscription,Qualification,Pipeline,False,False,30,226610,New Subscription,2025-01-25,2026-01-25,2024-01-21,2025-01-25,OWN004
+OPP049,ACC011,SecureBank AG - Expansion,Proposal/Price Quote,Best Case,False,False,50,124916,Expansion,2025-01-08,2026-01-08,2023-03-09,2025-01-08,OWN004
+OPP050,ACC011,SecureBank AG - Expansion,Closed Lost,Omitted,False,True,0,134489,Expansion,2024-11-01,2025-11-01,2022-12-31,2023-03-14,OWN004
+OPP051,ACC012,Acme West Division - New Subscription,Closed Won,Commit,True,True,100,264622,New Subscription,2024-04-15,2025-04-15,2024-02-14,2024-04-14,OWN005
+OPP052,ACC012,Acme West Division - Expansion,Qualification,Omitted,False,False,20,66424,Expansion,2024-12-21,2025-12-21,2024-04-04,2024-12-21,OWN001
+OPP053,ACC012,Acme West Division - Renewal,Closed Won,Commit,True,True,100,153332,Renewal,2024-01-10,2025-01-09,2023-10-10,2024-01-01,OWN001
+OPP054,ACC012,Acme West Division - Renewal,Closed Lost,Omitted,False,True,0,153670,Renewal,2024-11-01,2025-11-01,2023-02-14,2023-04-29,OWN004
+OPP055,ACC012,Acme West Division - Expansion,Negotiation/Review,Best Case,False,False,75,155732,Expansion,2025-02-06,2026-02-06,2023-09-14,2025-02-06,OWN003
+OPP056,ACC013,HealthCare Analytics - New Subscription,Qualification,Omitted,False,False,20,55858,New Subscription,2025-02-05,2026-02-05,2023-02-08,2025-02-05,OWN003
+OPP057,ACC013,HealthCare Analytics - Renewal,Closed Won,Commit,True,True,100,38056,Renewal,2024-02-23,2025-02-22,2023-12-31,2024-02-09,OWN005
+OPP058,ACC014,EduPlatform Inc - New Subscription,Negotiation/Review,Best Case,False,False,75,21013,New Subscription,2024-12-26,2025-12-26,2023-03-19,2024-12-26,OWN004
+OPP059,ACC014,EduPlatform Inc - Renewal,Negotiation/Review,Commit,False,False,90,24367,Renewal,2025-01-13,2026-01-13,2022-11-26,2025-01-13,OWN002
+OPP060,ACC015,LogiChain Solutions - New Subscription,Negotiation/Review,Commit,False,False,90,47971,New Subscription,2024-12-21,2025-12-21,2023-11-29,2024-12-21,OWN003
+OPP061,ACC015,LogiChain Solutions - Renewal,Closed Won,Commit,True,True,100,47105,Renewal,2024-02-04,2025-02-03,2023-11-07,2024-01-31,OWN001
+OPP062,ACC016,MediaStream Corp - New Subscription,Closed Won,Commit,True,True,100,81329,New Subscription,2024-04-17,2025-04-17,2024-02-15,2024-04-08,OWN002
+OPP063,ACC016,MediaStream Corp - Renewal,Qualification,Pipeline,False,False,30,18431,Renewal,2025-01-22,2026-01-22,2023-04-14,2025-01-22,OWN004
+OPP064,ACC016,MediaStream Corp - Renewal,Qualification,Omitted,False,False,20,31523,Renewal,2025-01-24,2026-01-24,2024-04-16,2025-01-24,OWN001
+OPP065,ACC017,AgriTech Innovations - New Subscription,Closed Won,Commit,True,True,100,23718,New Subscription,2023-02-27,2024-02-27,2023-01-05,2023-02-25,OWN002
+OPP066,ACC018,AutoManufacture Co - New Subscription,Proposal/Price Quote,Best Case,False,False,50,216471,New Subscription,2025-02-08,2026-02-08,2024-08-24,2025-02-08,OWN002
+OPP067,ACC018,AutoManufacture Co - Expansion,Qualification,Pipeline,False,False,30,124499,Expansion,2025-01-29,2026-01-29,2023-08-06,2025-01-29,OWN005
+OPP068,ACC018,AutoManufacture Co - Expansion,Proposal/Price Quote,Pipeline,False,False,60,27978,Expansion,2025-01-11,2026-01-11,2022-12-16,2025-01-11,OWN001
+OPP069,ACC018,AutoManufacture Co - Expansion,Proposal/Price Quote,Pipeline,False,False,60,52968,Expansion,2024-11-24,2025-11-24,2022-12-26,2024-11-24,OWN005
+OPP070,ACC018,AutoManufacture Co - Expansion,Qualification,Pipeline,False,False,30,68525,Expansion,2025-02-01,2026-02-01,2023-11-19,2025-02-01,OWN001
+OPP071,ACC019,EnergyGrid Systems - New Subscription,Closed Won,Commit,True,True,100,220251,New Subscription,2023-04-08,2024-04-07,2023-02-17,2023-03-30,OWN002
+OPP072,ACC019,EnergyGrid Systems - Renewal,Qualification,Omitted,False,False,20,288807,Renewal,2024-11-21,2025-11-21,2023-05-07,2024-11-21,OWN005
+OPP073,ACC020,InsureTech Partners - New Subscription,Negotiation/Review,Commit,False,False,90,80757,New Subscription,2024-12-08,2025-12-08,2022-12-22,2024-12-08,OWN001
+OPP074,ACC020,InsureTech Partners - Renewal,Closed Won,Commit,True,True,100,82298,Renewal,2023-06-09,2024-06-08,2023-05-02,2023-05-31,OWN002
+OPP075,ACC020,InsureTech Partners - Expansion,Closed Lost,Omitted,False,True,0,24538,Expansion,2024-11-25,2025-11-25,2024-08-29,2024-11-25,OWN003
+OPP076,ACC021,MediaOps Limited - New Subscription,Closed Lost,Omitted,False,True,0,122388,New Subscription,2024-11-01,2025-11-01,2023-03-23,2023-06-08,OWN003
+OPP077,ACC021,MediaOps Limited - Expansion,Closed Won,Commit,True,True,100,53119,Expansion,2023-10-19,2024-10-18,2023-08-11,2023-10-14,OWN004
+OPP078,ACC021,MediaOps Limited - Expansion,Closed Won,Commit,True,True,100,58283,Expansion,2023-04-07,2024-04-06,2023-02-20,2023-04-01,OWN001
+OPP079,ACC021,MediaOps Limited - Expansion,Qualification,Pipeline,False,False,30,110271,Expansion,2025-01-14,2026-01-14,2023-10-17,2025-01-14,OWN004
+OPP080,ACC022,DigitalMedia Hub Lim - New Subscription,Closed Won,Commit,True,True,100,200862,New Subscription,2023-11-14,2024-11-13,2023-09-12,2023-11-11,OWN001
+OPP081,ACC022,DigitalMedia Hub Lim - Expansion,Negotiation/Review,Best Case,False,False,75,140902,Expansion,2024-12-23,2025-12-23,2024-06-09,2024-12-23,OWN005
+OPP082,ACC022,DigitalMedia Hub Lim - Renewal,Closed Won,Commit,True,True,100,223173,Renewal,2023-02-06,2024-02-06,2022-12-09,2023-01-29,OWN002
+OPP083,ACC022,DigitalMedia Hub Lim - Expansion,Closed Won,Commit,True,True,100,92833,Expansion,2023-05-09,2024-05-08,2023-02-08,2023-05-01,OWN003
+OPP084,ACC023,BankTech Solutions G - New Subscription,Closed Lost,Omitted,False,True,0,24347,New Subscription,2024-11-01,2025-11-01,2023-08-19,2023-09-11,OWN005
+OPP085,ACC024,MerchantFlow Solutio - New Subscription,Negotiation/Review,Best Case,False,False,75,207483,New Subscription,2024-11-11,2025-11-11,2023-05-16,2024-11-11,OWN001
+OPP086,ACC024,MerchantFlow Solutio - Expansion,Proposal/Price Quote,Best Case,False,False,50,114125,Expansion,2025-02-08,2026-02-08,2023-02-02,2025-02-08,OWN005
+OPP087,ACC025,CreditLine Systems A - New Subscription,Closed Lost,Omitted,False,True,0,60921,New Subscription,2024-11-01,2025-11-01,2023-11-10,2023-12-26,OWN001
+OPP088,ACC025,CreditLine Systems A - Expansion,Negotiation/Review,Commit,False,False,90,7192,Expansion,2024-12-03,2025-12-03,2024-06-18,2024-12-03,OWN001
+OPP089,ACC025,CreditLine Systems A - Renewal,Proposal/Price Quote,Pipeline,False,False,60,45608,Renewal,2025-01-14,2026-01-14,2023-01-12,2025-01-14,OWN003
+OPP090,ACC026,UtilityMetrics Group - New Subscription,Negotiation/Review,Best Case,False,False,75,262356,New Subscription,2025-01-20,2026-01-20,2024-05-19,2025-01-20,OWN001
+OPP091,ACC026,UtilityMetrics Group - Expansion,Closed Lost,Omitted,False,True,0,112777,Expansion,2024-11-01,2025-11-01,2023-04-16,2023-06-20,OWN004
+OPP092,ACC026,UtilityMetrics Group - Expansion,Proposal/Price Quote,Best Case,False,False,50,117370,Expansion,2024-12-22,2025-12-22,2023-10-22,2024-12-22,OWN001
+OPP093,ACC027,GridOps Pro Group - New Subscription,Proposal/Price Quote,Pipeline,False,False,60,47511,New Subscription,2024-12-14,2025-12-14,2023-03-26,2024-12-14,OWN001
+OPP094,ACC028,StreamingData Associ - New Subscription,Closed Won,Commit,True,True,100,161470,New Subscription,2024-10-01,2025-10-01,2024-08-14,2024-09-23,OWN001
+OPP095,ACC028,StreamingData Associ - Expansion,Negotiation/Review,Commit,False,False,90,148581,Expansion,2024-12-06,2025-12-06,2023-11-22,2024-12-06,OWN001
+OPP096,ACC028,StreamingData Associ - Expansion,Closed Won,Commit,True,True,100,67272,Expansion,2023-08-12,2024-08-11,2023-07-06,2023-08-11,OWN005
+OPP097,ACC028,StreamingData Associ - Renewal,Closed Lost,Omitted,False,True,0,263865,Renewal,2024-11-01,2025-11-01,2023-10-16,2023-12-03,OWN005
+OPP098,ACC029,MerchantFlow GmbH - New Subscription,Closed Won,Commit,True,True,100,105322,New Subscription,2023-06-05,2024-06-04,2023-04-21,2023-06-04,OWN001
+OPP099,ACC029,MerchantFlow GmbH - Expansion,Closed Won,Commit,True,True,100,74946,Expansion,2024-02-05,2025-02-04,2023-11-10,2024-01-27,OWN003
+OPP100,ACC030,SupplyChain Pro Tech - New Subscription,Negotiation/Review,Commit,False,False,90,26738,New Subscription,2025-02-02,2026-02-02,2024-03-25,2025-02-02,OWN002
+OPP101,ACC030,SupplyChain Pro Tech - Expansion,Qualification,Pipeline,False,False,30,16718,Expansion,2024-10-28,2025-10-28,2023-10-27,2024-10-28,OWN002
+OPP102,ACC030,SupplyChain Pro Tech - Renewal,Qualification,Omitted,False,False,20,49926,Renewal,2024-12-12,2025-12-12,2024-08-17,2024-12-12,OWN004
+OPP103,ACC031,LabResults Pro Corpo - New Subscription,Qualification,Pipeline,False,False,30,32696,New Subscription,2024-12-09,2025-12-09,2023-06-29,2024-12-09,OWN005
+OPP104,ACC032,CustomerData Inc Ass - New Subscription,Closed Won,Commit,True,True,100,162906,New Subscription,2023-09-12,2024-09-11,2023-07-21,2023-09-01,OWN004
+OPP105,ACC032,CustomerData Inc Ass - Renewal,Proposal/Price Quote,Best Case,False,False,50,124274,Renewal,2024-12-31,2025-12-31,2023-04-26,2024-12-31,OWN004
+OPP106,ACC032,CustomerData Inc Ass - Renewal,Closed Lost,Omitted,False,True,0,241128,Renewal,2024-11-01,2025-11-01,2023-08-07,2023-09-09,OWN001
+OPP107,ACC032,CustomerData Inc Ass - Renewal,Closed Lost,Omitted,False,True,0,173216,Renewal,2024-11-01,2025-11-01,2023-05-07,2023-07-12,OWN004
+OPP108,ACC033,GridOps Pro Associat - New Subscription,Qualification,Pipeline,False,False,30,59102,New Subscription,2025-02-09,2026-02-09,2024-04-02,2025-02-09,OWN003
+OPP109,ACC033,GridOps Pro Associat - Expansion,Qualification,Omitted,False,False,20,32108,Expansion,2024-11-02,2025-11-02,2022-11-21,2024-11-02,OWN003
+OPP110,ACC034,LabResults Pro LLC - New Subscription,Proposal/Price Quote,Best Case,False,False,50,292847,New Subscription,2024-11-06,2025-11-06,2024-03-27,2024-11-06,OWN004
+OPP111,ACC034,LabResults Pro LLC - Expansion,Negotiation/Review,Best Case,False,False,75,148511,Expansion,2024-12-07,2025-12-07,2023-02-02,2024-12-07,OWN001
+OPP112,ACC034,LabResults Pro LLC - Renewal,Negotiation/Review,Commit,False,False,90,224506,Renewal,2025-01-09,2026-01-09,2022-11-23,2025-01-09,OWN001
+OPP113,ACC034,LabResults Pro LLC - Renewal,Proposal/Price Quote,Pipeline,False,False,60,144365,Renewal,2024-12-30,2025-12-30,2024-05-22,2024-12-30,OWN003
+OPP114,ACC035,NetCore GmbH - New Subscription,Qualification,Pipeline,False,False,30,57488,New Subscription,2024-12-23,2025-12-23,2023-04-02,2024-12-23,OWN005
+OPP115,ACC035,NetCore GmbH - Renewal,Qualification,Pipeline,False,False,30,92292,Renewal,2025-02-07,2026-02-07,2023-12-22,2025-02-07,OWN003
+OPP116,ACC035,NetCore GmbH - Renewal,Negotiation/Review,Best Case,False,False,75,50327,Renewal,2024-11-12,2025-11-12,2023-09-26,2024-11-12,OWN001
+OPP117,ACC036,BankTech Solutions L - New Subscription,Proposal/Price Quote,Pipeline,False,False,60,23601,New Subscription,2024-12-22,2025-12-22,2023-08-16,2024-12-22,OWN004
+OPP118,ACC036,BankTech Solutions L - Renewal,Negotiation/Review,Commit,False,False,90,13559,Renewal,2024-12-23,2025-12-23,2024-01-30,2024-12-23,OWN002
+OPP119,ACC037,WealthWise Limited - New Subscription,Closed Won,Commit,True,True,100,228001,New Subscription,2023-06-23,2024-06-22,2023-04-01,2023-06-15,OWN003
+OPP120,ACC037,WealthWise Limited - Renewal,Proposal/Price Quote,Pipeline,False,False,60,117962,Renewal,2024-12-08,2025-12-08,2023-04-11,2024-12-08,OWN002
+OPP121,ACC038,QualityTrack Systems - New Subscription,Qualification,Pipeline,False,False,30,146526,New Subscription,2024-11-25,2025-11-25,2022-12-13,2024-11-25,OWN001
+OPP122,ACC038,QualityTrack Systems - Renewal,Proposal/Price Quote,Pipeline,False,False,60,168153,Renewal,2024-11-06,2025-11-06,2023-05-21,2024-11-06,OWN005
+OPP123,ACC038,QualityTrack Systems - Renewal,Negotiation/Review,Best Case,False,False,75,54074,Renewal,2024-11-25,2025-11-25,2023-03-25,2024-11-25,OWN003
+OPP124,ACC038,QualityTrack Systems - Renewal,Closed Lost,Omitted,False,True,0,106621,Renewal,2024-11-01,2025-11-01,2023-01-03,2023-02-26,OWN004
+OPP125,ACC038,QualityTrack Systems - Renewal,Qualification,Omitted,False,False,20,143048,Renewal,2024-12-06,2025-12-06,2023-02-11,2024-12-06,OWN005
+OPP126,ACC039,CustomerData Inc Sol - New Subscription,Qualification,Omitted,False,False,20,29912,New Subscription,2024-12-12,2025-12-12,2023-10-07,2024-12-12,OWN002
+OPP127,ACC040,UtilityMetrics Techn - New Subscription,Closed Won,Commit,True,True,100,150927,New Subscription,2023-01-04,2024-01-04,2022-11-26,2022-12-23,OWN001
+OPP128,ACC040,UtilityMetrics Techn - Expansion,Closed Won,Commit,True,True,100,84900,Expansion,2024-04-18,2025-04-18,2024-03-07,2024-04-09,OWN002
+OPP129,ACC040,UtilityMetrics Techn - Renewal,Closed Lost,Omitted,False,True,0,104524,Renewal,2024-11-01,2025-11-01,2024-04-07,2024-06-08,OWN002
+OPP130,ACC040,UtilityMetrics Techn - Renewal,Proposal/Price Quote,Best Case,False,False,50,152095,Renewal,2024-12-06,2025-12-06,2022-11-25,2024-12-06,OWN003
+OPP131,ACC041,EnergyFlow Systems A - New Subscription,Negotiation/Review,Best Case,False,False,75,9419,New Subscription,2024-10-28,2025-10-28,2023-07-13,2024-10-28,OWN004
+OPP132,ACC041,EnergyFlow Systems A - Renewal,Proposal/Price Quote,Best Case,False,False,50,8180,Renewal,2025-02-04,2026-02-04,2024-06-19,2025-02-04,OWN003
+OPP133,ACC042,AudienceTrack Co - New Subscription,Qualification,Omitted,False,False,20,10446,New Subscription,2024-11-27,2025-11-27,2023-10-18,2024-11-27,OWN004
+OPP134,ACC043,ManufactureTech LLC - New Subscription,Proposal/Price Quote,Best Case,False,False,50,9105,New Subscription,2025-01-07,2026-01-07,2023-11-09,2025-01-07,OWN004
+OPP135,ACC044,DataFlow Associates - New Subscription,Negotiation/Review,Commit,False,False,90,83976,New Subscription,2025-02-03,2026-02-03,2023-07-30,2025-02-03,OWN002
+OPP136,ACC045,CustomerData Inc Co - New Subscription,Closed Lost,Omitted,False,True,0,16473,New Subscription,2024-11-01,2025-11-01,2023-04-01,2023-05-06,OWN001
+OPP137,ACC046,PharmaTech AG - New Subscription,Negotiation/Review,Best Case,False,False,75,6048,New Subscription,2025-01-18,2026-01-18,2024-07-19,2025-01-18,OWN001
+OPP138,ACC047,PharmaTech Co - New Subscription,Qualification,Pipeline,False,False,30,164484,New Subscription,2024-12-18,2025-12-18,2023-05-29,2024-12-18,OWN002
+OPP139,ACC047,PharmaTech Co - Renewal,Negotiation/Review,Commit,False,False,90,96227,Renewal,2024-11-03,2025-11-03,2023-05-09,2024-11-03,OWN002
+OPP140,ACC047,PharmaTech Co - Expansion,Closed Lost,Omitted,False,True,0,118369,Expansion,2024-11-01,2025-11-01,2024-07-15,2024-08-20,OWN002
+OPP141,ACC047,PharmaTech Co - Renewal,Negotiation/Review,Best Case,False,False,75,260431,Renewal,2025-02-10,2026-02-10,2023-10-26,2025-02-10,OWN004
+OPP142,ACC048,AssemblyLine Analyti - New Subscription,Proposal/Price Quote,Pipeline,False,False,60,15427,New Subscription,2025-01-20,2026-01-20,2023-02-14,2025-01-20,OWN004
+OPP143,ACC048,AssemblyLine Analyti - Expansion,Qualification,Omitted,False,False,20,6897,Expansion,2025-01-05,2026-01-05,2022-12-17,2025-01-05,OWN001
+OPP144,ACC049,BroadcastPro Solutio - New Subscription,Closed Lost,Omitted,False,True,0,24972,New Subscription,2024-11-01,2025-11-01,2023-10-05,2023-11-04,OWN004
+OPP145,ACC049,BroadcastPro Solutio - Renewal,Proposal/Price Quote,Best Case,False,False,50,21334,Renewal,2024-12-13,2025-12-13,2023-06-01,2024-12-13,OWN002
+OPP146,ACC050,StudentData Systems  - New Subscription,Negotiation/Review,Best Case,False,False,75,169228,New Subscription,2025-02-13,2026-02-13,2023-01-20,2025-02-13,OWN002
+OPP147,ACC050,StudentData Systems  - Expansion,Qualification,Omitted,False,False,20,48641,Expansion,2024-11-19,2025-11-19,2023-11-10,2024-11-19,OWN002
+OPP148,ACC050,StudentData Systems  - Expansion,Closed Won,Commit,True,True,100,83085,Expansion,2023-11-30,2024-11-29,2023-10-18,2023-11-18,OWN002
+OPP149,ACC050,StudentData Systems  - Expansion,Closed Won,Commit,True,True,100,75338,Expansion,2023-04-11,2024-04-10,2023-03-05,2023-04-08,OWN004
+OPP150,ACC051,HealthTrack Solution - New Subscription,Proposal/Price Quote,Pipeline,False,False,60,92318,New Subscription,2025-01-02,2026-01-02,2024-08-31,2025-01-02,OWN004
+OPP151,ACC051,HealthTrack Solution - Renewal,Closed Won,Commit,True,True,100,192517,Renewal,2024-04-17,2025-04-17,2024-03-20,2024-04-14,OWN001
+OPP152,ACC051,HealthTrack Solution - Renewal,Qualification,Pipeline,False,False,30,221697,Renewal,2025-01-30,2026-01-30,2023-12-20,2025-01-30,OWN003
+OPP153,ACC051,HealthTrack Solution - Expansion,Closed Won,Commit,True,True,100,40759,Expansion,2024-01-30,2025-01-29,2023-11-02,2024-01-21,OWN001
+OPP154,ACC051,HealthTrack Solution - Renewal,Negotiation/Review,Commit,False,False,90,68653,Renewal,2025-02-02,2026-02-02,2023-01-07,2025-02-02,OWN001
+OPP155,ACC052,AssemblyLine Analyti - New Subscription,Proposal/Price Quote,Best Case,False,False,50,9025,New Subscription,2025-01-11,2026-01-11,2023-07-17,2025-01-11,OWN004
+OPP156,ACC052,AssemblyLine Analyti - Renewal,Negotiation/Review,Best Case,False,False,75,7582,Renewal,2024-12-05,2025-12-05,2024-01-13,2024-12-05,OWN001
+OPP157,ACC053,PowerGrid Analytics  - New Subscription,Qualification,Omitted,False,False,20,28209,New Subscription,2024-11-25,2025-11-25,2024-07-06,2024-11-25,OWN004
+OPP158,ACC053,PowerGrid Analytics  - Expansion,Qualification,Pipeline,False,False,30,19613,Expansion,2024-11-16,2025-11-16,2024-08-10,2024-11-16,OWN005
+OPP159,ACC053,PowerGrid Analytics  - Expansion,Closed Lost,Omitted,False,True,0,33369,Expansion,2024-11-01,2025-11-01,2022-11-20,2022-12-30,OWN003
+OPP160,ACC054,PaymentStream Soluti - New Subscription,Negotiation/Review,Commit,False,False,90,60510,New Subscription,2025-02-05,2026-02-05,2024-07-13,2025-02-05,OWN003
+OPP161,ACC055,TrainingTrack Limite - New Subscription,Negotiation/Review,Commit,False,False,90,28260,New Subscription,2025-01-02,2026-01-02,2024-01-20,2025-01-02,OWN002
+OPP162,ACC055,TrainingTrack Limite - Renewal,Proposal/Price Quote,Best Case,False,False,50,24655,Renewal,2024-10-27,2025-10-27,2022-12-02,2024-10-27,OWN002
+OPP163,ACC056,LearningMetrics Part - New Subscription,Proposal/Price Quote,Pipeline,False,False,60,247576,New Subscription,2024-11-12,2025-11-12,2024-07-03,2024-11-12,OWN004
+OPP164,ACC056,LearningMetrics Part - Renewal,Negotiation/Review,Best Case,False,False,75,50092,Renewal,2024-11-17,2025-11-17,2024-03-18,2024-11-17,OWN002
+OPP165,ACC057,StoreFront Solutions - New Subscription,Proposal/Price Quote,Best Case,False,False,50,98614,New Subscription,2024-12-02,2025-12-02,2023-09-09,2024-12-02,OWN003
+OPP166,ACC057,StoreFront Solutions - Expansion,Closed Won,Commit,True,True,100,94021,Expansion,2023-04-07,2024-04-06,2023-01-24,2023-04-04,OWN002
+OPP167,ACC057,StoreFront Solutions - Expansion,Qualification,Pipeline,False,False,30,143128,Expansion,2025-01-05,2026-01-05,2023-10-12,2025-01-05,OWN002
+OPP168,ACC058,CleanEnergy Hub Solu - New Subscription,Negotiation/Review,Commit,False,False,90,258581,New Subscription,2024-11-13,2025-11-13,2023-01-03,2024-11-13,OWN001
+OPP169,ACC058,CleanEnergy Hub Solu - Expansion,Closed Won,Commit,True,True,100,76524,Expansion,2023-10-19,2024-10-18,2023-09-02,2023-10-11,OWN004
+OPP170,ACC059,MediaMetrics AG - New Subscription,Qualification,Pipeline,False,False,30,8841,New Subscription,2024-11-29,2025-11-29,2023-10-13,2024-11-29,OWN003
+OPP171,ACC059,MediaMetrics AG - Expansion,Closed Lost,Omitted,False,True,0,4749,Expansion,2024-11-01,2025-11-01,2024-05-03,2024-07-29,OWN001
+OPP172,ACC060,EduTech Solutions AG - New Subscription,Closed Lost,Omitted,False,True,0,165819,New Subscription,2024-11-01,2025-11-01,2024-08-24,2024-09-22,OWN003
+OPP173,ACC060,EduTech Solutions AG - Renewal,Closed Won,Commit,True,True,100,225584,Renewal,2024-01-12,2025-01-11,2023-10-18,2024-01-08,OWN002
+OPP174,ACC060,EduTech Solutions AG - Renewal,Closed Lost,Omitted,False,True,0,173800,Renewal,2024-11-01,2025-11-01,2022-11-26,2023-02-24,OWN005
+OPP175,ACC061,Campus Analytics Ass - New Subscription,Qualification,Pipeline,False,False,30,49291,New Subscription,2025-02-10,2026-02-10,2022-12-30,2025-02-10,OWN004
+OPP176,ACC061,Campus Analytics Ass - Renewal,Proposal/Price Quote,Pipeline,False,False,60,26415,Renewal,2024-12-02,2025-12-02,2024-03-30,2024-12-02,OWN001
+OPP177,ACC062,HealthTrack Solution - New Subscription,Proposal/Price Quote,Pipeline,False,False,60,119944,New Subscription,2024-12-21,2025-12-21,2023-07-26,2024-12-21,OWN005
+OPP178,ACC062,HealthTrack Solution - Renewal,Qualification,Pipeline,False,False,30,228319,Renewal,2025-01-28,2026-01-28,2024-08-03,2025-01-28,OWN003
+OPP179,ACC062,HealthTrack Solution - Renewal,Negotiation/Review,Best Case,False,False,75,298201,Renewal,2024-11-18,2025-11-18,2023-02-28,2024-11-18,OWN004
+OPP180,ACC062,HealthTrack Solution - Renewal,Proposal/Price Quote,Pipeline,False,False,60,174726,Renewal,2024-12-08,2025-12-08,2024-02-26,2024-12-08,OWN002
+OPP181,ACC062,HealthTrack Solution - Renewal,Closed Lost,Omitted,False,True,0,235463,Renewal,2024-11-01,2025-11-01,2023-04-14,2023-06-24,OWN003
+OPP182,ACC063,InventoryTrack Group - New Subscription,Qualification,Omitted,False,False,20,21736,New Subscription,2025-02-04,2026-02-04,2024-05-08,2025-02-04,OWN005
+OPP183,ACC063,InventoryTrack Group - Renewal,Qualification,Pipeline,False,False,30,75547,Renewal,2024-12-30,2025-12-30,2023-06-24,2024-12-30,OWN005
+OPP184,ACC063,InventoryTrack Group - Renewal,Closed Lost,Omitted,False,True,0,53107,Renewal,2024-11-01,2025-11-01,2023-07-13,2023-08-20,OWN002
+OPP185,ACC064,SystemPro Co - New Subscription,Qualification,Pipeline,False,False,30,20274,New Subscription,2025-02-09,2026-02-09,2024-04-11,2025-02-09,OWN005
+OPP186,ACC064,SystemPro Co - Expansion,Qualification,Pipeline,False,False,30,4276,Expansion,2024-11-11,2025-11-11,2023-04-18,2024-11-11,OWN003
+OPP187,ACC065,PaymentStream Associ - New Subscription,Proposal/Price Quote,Best Case,False,False,50,10716,New Subscription,2025-01-10,2026-01-10,2023-09-19,2025-01-10,OWN005
+OPP188,ACC066,AudienceTrack Associ - New Subscription,Proposal/Price Quote,Pipeline,False,False,60,296346,New Subscription,2024-11-13,2025-11-13,2024-04-20,2024-11-13,OWN004
+OPP189,ACC066,AudienceTrack Associ - Renewal,Qualification,Pipeline,False,False,30,106501,Renewal,2024-12-12,2025-12-12,2024-07-22,2024-12-12,OWN001
+OPP190,ACC066,AudienceTrack Associ - Renewal,Negotiation/Review,Commit,False,False,90,154397,Renewal,2024-12-03,2025-12-03,2023-07-11,2024-12-03,OWN003
+OPP191,ACC067,RetailMetrics GmbH - New Subscription,Negotiation/Review,Best Case,False,False,75,99856,New Subscription,2025-01-02,2026-01-02,2024-06-24,2025-01-02,OWN002
+OPP192,ACC067,RetailMetrics GmbH - Expansion,Qualification,Pipeline,False,False,30,119830,Expansion,2024-11-26,2025-11-26,2023-10-16,2024-11-26,OWN005
+OPP193,ACC067,RetailMetrics GmbH - Renewal,Qualification,Pipeline,False,False,30,295316,Renewal,2025-01-22,2026-01-22,2023-10-02,2025-01-22,OWN003
+OPP194,ACC068,E-Commerce Hub Solut - New Subscription,Negotiation/Review,Best Case,False,False,75,98287,New Subscription,2024-12-30,2025-12-30,2023-02-27,2024-12-30,OWN001
+OPP195,ACC069,EduTech Solutions As - New Subscription,Qualification,Pipeline,False,False,30,50613,New Subscription,2024-11-17,2025-11-17,2023-11-24,2024-11-17,OWN001
+OPP196,ACC069,EduTech Solutions As - Expansion,Proposal/Price Quote,Pipeline,False,False,60,30286,Expansion,2024-11-06,2025-11-06,2022-11-18,2024-11-06,OWN001
+OPP197,ACC070,MedFlow Group - New Subscription,Closed Lost,Omitted,False,True,0,279315,New Subscription,2024-11-01,2025-11-01,2023-11-30,2024-02-04,OWN005
+OPP198,ACC070,MedFlow Group - Expansion,Negotiation/Review,Best Case,False,False,75,28822,Expansion,2025-01-16,2026-01-16,2024-01-18,2025-01-16,OWN001
+OPP199,ACC071,ManufactureTech Asso - New Subscription,Negotiation/Review,Commit,False,False,90,158356,New Subscription,2025-01-05,2026-01-05,2023-10-10,2025-01-05,OWN001
+OPP200,ACC071,ManufactureTech Asso - Renewal,Proposal/Price Quote,Pipeline,False,False,60,173017,Renewal,2024-11-06,2025-11-06,2024-01-24,2024-11-06,OWN002
+OPP201,ACC072,LearningMetrics GmbH - New Subscription,Qualification,Omitted,False,False,20,81073,New Subscription,2024-11-01,2025-11-01,2023-06-30,2024-11-01,OWN004
+OPP202,ACC072,LearningMetrics GmbH - Expansion,Closed Won,Commit,True,True,100,22471,Expansion,2024-03-03,2025-03-03,2023-12-03,2024-02-20,OWN002
+OPP203,ACC072,LearningMetrics GmbH - Renewal,Qualification,Omitted,False,False,20,85233,Renewal,2025-01-04,2026-01-04,2023-06-17,2025-01-04,OWN004
+OPP204,ACC073,ClinicalData Systems - New Subscription,Proposal/Price Quote,Pipeline,False,False,60,56892,New Subscription,2025-01-14,2026-01-14,2023-10-09,2025-01-14,OWN001
+OPP205,ACC073,ClinicalData Systems - Renewal,Qualification,Omitted,False,False,20,282656,Renewal,2025-02-05,2026-02-05,2024-03-31,2025-02-05,OWN003
+OPP206,ACC073,ClinicalData Systems - Renewal,Negotiation/Review,Commit,False,False,90,278357,Renewal,2025-01-13,2026-01-13,2022-11-30,2025-01-13,OWN005
+OPP207,ACC074,CleanEnergy Hub Solu - New Subscription,Qualification,Omitted,False,False,20,24971,New Subscription,2024-11-04,2025-11-04,2023-06-26,2024-11-04,OWN004
+OPP208,ACC074,CleanEnergy Hub Solu - Renewal,Proposal/Price Quote,Best Case,False,False,50,86978,Renewal,2025-01-13,2026-01-13,2024-03-13,2025-01-13,OWN003
+OPP209,ACC075,Digital Forge GmbH - New Subscription,Qualification,Omitted,False,False,20,111251,New Subscription,2024-11-22,2025-11-22,2023-06-21,2024-11-22,OWN001
+OPP210,ACC075,Digital Forge GmbH - Expansion,Negotiation/Review,Best Case,False,False,75,41125,Expansion,2024-11-18,2025-11-18,2024-05-30,2024-11-18,OWN005
+OPP211,ACC075,Digital Forge GmbH - Expansion,Closed Won,Commit,True,True,100,129277,Expansion,2023-12-14,2024-12-13,2023-11-19,2023-12-09,OWN002
+OPP212,ACC076,HealthTrack Solution - New Subscription,Closed Won,Commit,True,True,100,84161,New Subscription,2024-07-30,2025-07-30,2024-06-10,2024-07-20,OWN003
+OPP213,ACC077,InvestTech Inc - New Subscription,Proposal/Price Quote,Pipeline,False,False,60,62932,New Subscription,2024-11-16,2025-11-16,2024-06-19,2024-11-16,OWN003
+OPP214,ACC077,InvestTech Inc - Expansion,Negotiation/Review,Commit,False,False,90,55051,Expansion,2024-12-06,2025-12-06,2024-07-05,2024-12-06,OWN005
+OPP215,ACC077,InvestTech Inc - Renewal,Closed Lost,Omitted,False,True,0,140881,Renewal,2024-11-01,2025-11-01,2024-03-26,2024-05-22,OWN005
+OPP216,ACC077,InvestTech Inc - Renewal,Proposal/Price Quote,Best Case,False,False,50,248644,Renewal,2024-12-29,2025-12-29,2024-04-19,2024-12-29,OWN005
+OPP217,ACC078,WellnessData Group - New Subscription,Closed Won,Commit,True,True,100,24975,New Subscription,2024-05-29,2025-05-29,2024-03-07,2024-05-21,OWN002
+OPP218,ACC078,WellnessData Group - Renewal,Proposal/Price Quote,Best Case,False,False,50,22274,Renewal,2024-10-27,2025-10-27,2024-06-03,2024-10-27,OWN002
+OPP219,ACC079,WellnessData Systems - New Subscription,Closed Lost,Omitted,False,True,0,27815,New Subscription,2024-11-01,2025-11-01,2023-08-06,2023-09-12,OWN005
+OPP220,ACC079,WellnessData Systems - Expansion,Closed Won,Commit,True,True,100,10293,Expansion,2023-12-23,2024-12-22,2023-11-17,2023-12-10,OWN004
+OPP221,ACC080,E-Commerce Hub Corpo - New Subscription,Qualification,Pipeline,False,False,30,292870,New Subscription,2025-01-17,2026-01-17,2024-04-18,2025-01-17,OWN004
+OPP222,ACC080,E-Commerce Hub Corpo - Renewal,Closed Won,Commit,True,True,100,173657,Renewal,2023-05-13,2024-05-12,2023-03-14,2023-05-04,OWN002
+OPP223,ACC081,AcademicHub Inc - New Subscription,Closed Won,Commit,True,True,100,293217,New Subscription,2023-10-24,2024-10-23,2023-07-19,2023-10-10,OWN001
+OPP224,ACC081,AcademicHub Inc - Expansion,Proposal/Price Quote,Best Case,False,False,50,75359,Expansion,2024-12-31,2025-12-31,2023-11-10,2024-12-31,OWN004
+OPP225,ACC081,AcademicHub Inc - Renewal,Closed Lost,Omitted,False,True,0,243119,Renewal,2024-11-01,2025-11-01,2023-06-21,2023-08-21,OWN002
+OPP226,ACC081,AcademicHub Inc - Renewal,Closed Lost,Omitted,False,True,0,252317,Renewal,2024-11-01,2025-11-01,2023-07-26,2023-08-27,OWN004
+OPP227,ACC081,AcademicHub Inc - Renewal,Closed Won,Commit,True,True,100,222690,Renewal,2023-01-20,2024-01-20,2022-12-18,2023-01-09,OWN001
+OPP228,ACC082,HealthFirst Inc - New Subscription,Proposal/Price Quote,Best Case,False,False,50,15234,New Subscription,2024-11-27,2025-11-27,2023-04-01,2024-11-27,OWN004
+OPP229,ACC083,PowerGrid Analytics  - New Subscription,Qualification,Omitted,False,False,20,26008,New Subscription,2024-12-26,2025-12-26,2024-06-11,2024-12-26,OWN002
+OPP230,ACC083,PowerGrid Analytics  - Renewal,Qualification,Omitted,False,False,20,9393,Renewal,2024-11-17,2025-11-17,2024-09-15,2024-11-17,OWN003
+OPP231,ACC084,BroadcastPro Technol - New Subscription,Closed Won,Commit,True,True,100,20418,New Subscription,2023-02-24,2024-02-24,2023-01-14,2023-02-13,OWN005
+OPP232,ACC084,BroadcastPro Technol - Renewal,Proposal/Price Quote,Pipeline,False,False,60,59051,Renewal,2025-01-10,2026-01-10,2023-11-13,2025-01-10,OWN003
+OPP233,ACC085,StoreFront Solutions - New Subscription,Closed Won,Commit,True,True,100,10606,New Subscription,2023-09-04,2024-09-03,2023-07-05,2023-08-31,OWN002
+OPP234,ACC086,PowerGrid Analytics  - New Subscription,Closed Won,Commit,True,True,100,19362,New Subscription,2023-03-04,2024-03-03,2023-01-31,2023-02-28,OWN004
+OPP235,ACC086,PowerGrid Analytics  - Expansion,Closed Lost,Omitted,False,True,0,11677,Expansion,2024-11-01,2025-11-01,2023-10-19,2023-12-10,OWN001
+OPP236,ACC086,PowerGrid Analytics  - Renewal,Proposal/Price Quote,Pipeline,False,False,60,60606,Renewal,2025-01-10,2026-01-10,2024-01-03,2025-01-10,OWN001
+OPP237,ACC087,ManufactureTech Asso - New Subscription,Proposal/Price Quote,Pipeline,False,False,60,245156,New Subscription,2024-12-08,2025-12-08,2023-07-01,2024-12-08,OWN002
+OPP238,ACC087,ManufactureTech Asso - Renewal,Closed Won,Commit,True,True,100,65135,Renewal,2024-01-03,2025-01-02,2023-10-17,2024-01-01,OWN002
+OPP239,ACC087,ManufactureTech Asso - Expansion,Closed Lost,Omitted,False,True,0,72654,Expansion,2024-11-01,2025-11-01,2023-06-01,2023-06-22,OWN003
+OPP240,ACC087,ManufactureTech Asso - Renewal,Closed Lost,Omitted,False,True,0,82664,Renewal,2024-11-01,2025-11-01,2023-07-13,2023-09-08,OWN001
+OPP241,ACC087,ManufactureTech Asso - Renewal,Qualification,Omitted,False,False,20,298195,Renewal,2024-11-11,2025-11-11,2024-01-12,2024-11-11,OWN001
+OPP242,ACC088,PharmaTech GmbH - New Subscription,Proposal/Price Quote,Best Case,False,False,50,24877,New Subscription,2025-01-25,2026-01-25,2023-07-02,2025-01-25,OWN004
+OPP243,ACC089,ManufactureTech AG - New Subscription,Qualification,Omitted,False,False,20,30813,New Subscription,2024-12-10,2025-12-10,2024-05-06,2024-12-10,OWN005
+OPP244,ACC090,RetailOps Solutions - New Subscription,Negotiation/Review,Commit,False,False,90,170841,New Subscription,2025-02-13,2026-02-13,2024-06-20,2025-02-13,OWN003
+OPP245,ACC090,RetailOps Solutions - Expansion,Closed Won,Commit,True,True,100,32391,Expansion,2024-07-22,2025-07-22,2024-05-30,2024-07-15,OWN002
+OPP246,ACC090,RetailOps Solutions - Expansion,Negotiation/Review,Commit,False,False,90,18844,Expansion,2025-02-01,2026-02-01,2023-07-25,2025-02-01,OWN002
+OPP247,ACC091,UtilityMetrics Techn - New Subscription,Negotiation/Review,Best Case,False,False,75,19119,New Subscription,2024-11-16,2025-11-16,2023-02-15,2024-11-16,OWN001
+OPP248,ACC092,DataFlow GmbH - New Subscription,Negotiation/Review,Best Case,False,False,75,176545,New Subscription,2025-02-11,2026-02-11,2024-08-19,2025-02-11,OWN001
+OPP249,ACC092,DataFlow GmbH - Expansion,Qualification,Omitted,False,False,20,24661,Expansion,2024-11-02,2025-11-02,2023-08-03,2024-11-02,OWN002
+OPP250,ACC092,DataFlow GmbH - Expansion,Negotiation/Review,Best Case,False,False,75,131049,Expansion,2024-11-04,2025-11-04,2022-12-08,2024-11-04,OWN005
+OPP251,ACC093,DataFlow Co - New Subscription,Closed Lost,Omitted,False,True,0,22020,New Subscription,2024-11-01,2025-11-01,2023-12-04,2024-01-27,OWN002
+OPP252,ACC093,DataFlow Co - Renewal,Qualification,Omitted,False,False,20,19099,Renewal,2024-12-11,2025-12-11,2023-07-12,2024-12-11,OWN003
+OPP253,ACC094,CourseFlow Limited - New Subscription,Qualification,Pipeline,False,False,30,171116,New Subscription,2025-01-02,2026-01-02,2023-05-23,2025-01-02,OWN001
+OPP254,ACC094,CourseFlow Limited - Renewal,Proposal/Price Quote,Best Case,False,False,50,121375,Renewal,2024-11-20,2025-11-20,2024-04-07,2024-11-20,OWN001
+OPP255,ACC094,CourseFlow Limited - Renewal,Closed Lost,Omitted,False,True,0,138856,Renewal,2024-11-01,2025-11-01,2023-09-25,2023-11-02,OWN003
+OPP256,ACC095,eLearning Pro Inc - New Subscription,Closed Lost,Omitted,False,True,0,17975,New Subscription,2024-11-01,2025-11-01,2024-06-26,2024-08-05,OWN003
+OPP257,ACC096,MediaOps Solutions - New Subscription,Negotiation/Review,Best Case,False,False,75,113401,New Subscription,2024-11-17,2025-11-17,2023-03-24,2024-11-17,OWN002
+OPP258,ACC096,MediaOps Solutions - Renewal,Qualification,Pipeline,False,False,30,123846,Renewal,2024-12-22,2025-12-22,2023-10-29,2024-12-22,OWN002
+OPP259,ACC097,MediCare Analytics C - New Subscription,Proposal/Price Quote,Pipeline,False,False,60,15046,New Subscription,2025-01-18,2026-01-18,2024-07-14,2025-01-18,OWN003
+OPP260,ACC097,MediCare Analytics C - Renewal,Closed Lost,Omitted,False,True,0,20681,Renewal,2024-11-01,2025-11-01,2023-09-13,2023-10-30,OWN001
+OPP261,ACC098,PublisherTech Limite - New Subscription,Qualification,Pipeline,False,False,30,15301,New Subscription,2025-01-13,2026-01-13,2024-07-27,2025-01-13,OWN001
+OPP262,ACC098,PublisherTech Limite - Renewal,Qualification,Omitted,False,False,20,8314,Renewal,2024-12-05,2025-12-05,2023-05-05,2024-12-05,OWN001
+OPP263,ACC099,NewsFlow Systems Ass - New Subscription,Negotiation/Review,Best Case,False,False,75,26802,New Subscription,2024-12-08,2025-12-08,2023-10-09,2024-12-08,OWN003
+OPP264,ACC099,NewsFlow Systems Ass - Expansion,Qualification,Omitted,False,False,20,25472,Expansion,2024-12-26,2025-12-26,2023-01-23,2024-12-26,OWN005
+OPP265,ACC099,NewsFlow Systems Ass - Renewal,Proposal/Price Quote,Best Case,False,False,50,87431,Renewal,2024-12-14,2025-12-14,2023-02-07,2024-12-14,OWN001
+OPP266,ACC100,AppMakers Corporatio - New Subscription,Proposal/Price Quote,Pipeline,False,False,60,22621,New Subscription,2024-10-28,2025-10-28,2024-09-10,2024-10-28,OWN001
+OPP267,ACC101,LearningMetrics Grou - New Subscription,Qualification,Omitted,False,False,20,33895,New Subscription,2025-01-01,2026-01-01,2022-12-29,2025-01-01,OWN004
+OPP268,ACC102,ContentStream Limite - New Subscription,Qualification,Omitted,False,False,20,12192,New Subscription,2024-12-08,2025-12-08,2023-09-10,2024-12-08,OWN004
+OPP269,ACC103,ProductionHub Inc - New Subscription,Proposal/Price Quote,Pipeline,False,False,60,243115,New Subscription,2024-12-04,2025-12-04,2024-04-08,2024-12-04,OWN003
+OPP270,ACC103,ProductionHub Inc - Expansion,Qualification,Omitted,False,False,20,82186,Expansion,2024-11-29,2025-11-29,2024-01-10,2024-11-29,OWN005
+OPP271,ACC103,ProductionHub Inc - Expansion,Negotiation/Review,Commit,False,False,90,129609,Expansion,2024-12-19,2025-12-19,2023-08-17,2024-12-19,OWN004
+OPP272,ACC103,ProductionHub Inc - Expansion,Proposal/Price Quote,Pipeline,False,False,60,51292,Expansion,2025-01-26,2026-01-26,2023-01-22,2025-01-26,OWN002
+OPP273,ACC104,PharmaTech Corp - New Subscription,Negotiation/Review,Commit,False,False,90,51941,New Subscription,2025-02-02,2026-02-02,2023-09-28,2025-02-02,OWN001
+OPP274,ACC104,PharmaTech Corp - Renewal,Negotiation/Review,Best Case,False,False,75,49435,Renewal,2024-11-29,2025-11-29,2024-08-24,2024-11-29,OWN005
+OPP275,ACC105,ManufactureTech Part - New Subscription,Proposal/Price Quote,Best Case,False,False,50,271652,New Subscription,2024-11-26,2025-11-26,2024-02-02,2024-11-26,OWN005
+OPP276,ACC105,ManufactureTech Part - Expansion,Qualification,Pipeline,False,False,30,25049,Expansion,2025-01-11,2026-01-11,2022-12-12,2025-01-11,OWN005
+OPP277,ACC105,ManufactureTech Part - Renewal,Closed Won,Commit,True,True,100,55036,Renewal,2023-09-06,2024-09-05,2023-07-07,2023-08-26,OWN004
+OPP278,ACC105,ManufactureTech Part - Renewal,Qualification,Pipeline,False,False,30,63204,Renewal,2024-11-26,2025-11-26,2024-05-04,2024-11-26,OWN001
+OPP279,ACC106,CodeCraft AG - New Subscription,Proposal/Price Quote,Best Case,False,False,50,18097,New Subscription,2024-12-21,2025-12-21,2024-02-06,2024-12-21,OWN004
+OPP280,ACC106,CodeCraft AG - Expansion,Closed Won,Commit,True,True,100,32285,Expansion,2023-07-20,2024-07-19,2023-04-27,2023-07-14,OWN002
+OPP281,ACC107,CodeCraft Corporatio - New Subscription,Negotiation/Review,Commit,False,False,90,16111,New Subscription,2024-12-19,2025-12-19,2024-03-08,2024-12-19,OWN002
+OPP282,ACC107,CodeCraft Corporatio - Renewal,Negotiation/Review,Commit,False,False,90,25671,Renewal,2024-12-02,2025-12-02,2023-01-17,2024-12-02,OWN004
+OPP283,ACC108,AssetTrack Corporati - New Subscription,Negotiation/Review,Best Case,False,False,75,9434,New Subscription,2025-01-06,2026-01-06,2023-04-10,2025-01-06,OWN004
+OPP284,ACC108,AssetTrack Corporati - Expansion,Negotiation/Review,Commit,False,False,90,9214,Expansion,2025-01-09,2026-01-09,2024-08-01,2025-01-09,OWN005
+OPP285,ACC109,FinanceHub Group - New Subscription,Qualification,Pipeline,False,False,30,249106,New Subscription,2024-12-13,2025-12-13,2023-05-23,2024-12-13,OWN001
+OPP286,ACC109,FinanceHub Group - Renewal,Negotiation/Review,Commit,False,False,90,272306,Renewal,2025-01-23,2026-01-23,2023-02-28,2025-01-23,OWN005
+OPP287,ACC109,FinanceHub Group - Expansion,Qualification,Pipeline,False,False,30,26671,Expansion,2024-12-25,2025-12-25,2023-09-26,2024-12-25,OWN005
+OPP288,ACC109,FinanceHub Group - Expansion,Negotiation/Review,Commit,False,False,90,71778,Expansion,2025-01-29,2026-01-29,2023-04-08,2025-01-29,OWN002
+OPP289,ACC110,eLearning Pro Associ - New Subscription,Qualification,Omitted,False,False,20,25870,New Subscription,2025-01-31,2026-01-31,2024-08-07,2025-01-31,OWN004
+OPP290,ACC110,eLearning Pro Associ - Expansion,Qualification,Pipeline,False,False,30,5011,Expansion,2025-02-01,2026-02-01,2024-05-10,2025-02-01,OWN005
+OPP291,ACC111,POS Systems Pro Inc - New Subscription,Qualification,Omitted,False,False,20,92778,New Subscription,2025-01-31,2026-01-31,2023-08-27,2025-01-31,OWN002
+OPP292,ACC111,POS Systems Pro Inc - Expansion,Qualification,Pipeline,False,False,30,117463,Expansion,2024-12-29,2025-12-29,2022-11-23,2024-12-29,OWN003
+OPP293,ACC112,FactoryFlow Corporat - New Subscription,Negotiation/Review,Best Case,False,False,75,50364,New Subscription,2024-11-24,2025-11-24,2023-06-24,2024-11-24,OWN005
+OPP294,ACC112,FactoryFlow Corporat - Renewal,Proposal/Price Quote,Pipeline,False,False,60,70360,Renewal,2024-11-05,2025-11-05,2024-09-16,2024-11-05,OWN005
+OPP295,ACC113,StoreFront Solutions - New Subscription,Proposal/Price Quote,Pipeline,False,False,60,60157,New Subscription,2024-11-03,2025-11-03,2023-01-14,2024-11-03,OWN004
+OPP296,ACC113,StoreFront Solutions - Expansion,Qualification,Omitted,False,False,20,27454,Expansion,2024-12-30,2025-12-30,2023-09-18,2024-12-30,OWN002
+OPP297,ACC113,StoreFront Solutions - Expansion,Proposal/Price Quote,Best Case,False,False,50,43415,Expansion,2024-11-25,2025-11-25,2023-06-09,2024-11-25,OWN001
+OPP298,ACC114,SchoolOps Technologi - New Subscription,Negotiation/Review,Best Case,False,False,75,149591,New Subscription,2024-11-23,2025-11-23,2023-08-15,2024-11-23,OWN003
+OPP299,ACC114,SchoolOps Technologi - Renewal,Closed Lost,Omitted,False,True,0,96517,Renewal,2024-11-01,2025-11-01,2022-12-31,2023-01-27,OWN004
+OPP300,ACC114,SchoolOps Technologi - Renewal,Closed Lost,Omitted,False,True,0,252810,Renewal,2024-11-01,2025-11-01,2023-12-08,2024-02-16,OWN002

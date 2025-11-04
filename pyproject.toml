@@ -1,0 +1,23 @@
+[project]
+name = "medallion-reference"
+version = "0.1.0"
+description = "Medallion reference dbt project with lineage tracking"
+requires-python = ">=3.12"
+dependencies = [
+  # Lineage prototype (workspace member)
+  "typedef-data-intelligence[snowflake, openlineage, kuzu, falkordb, semantic_analysis]",
+  # Data generation dependencies
+  "faker>=20.0.0",
+  "pandas>=2.0.0",
+  "numpy>=1.24.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4.0", "ruff>=0.1.0"]
+
+[tool.uv.sources]
+typedef-data-intelligence = { workspace = true }
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

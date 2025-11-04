@@ -1,0 +1,97 @@
+version: 2
+
+models:
+  - name: stg_sfdc__account
+    description: Staged Salesforce account data with normalized types
+    columns:
+      - name: account_id
+        description: Primary key for accounts
+        tests:
+          - unique
+          - not_null
+      - name: geo
+        description: Geographic region
+        tests:
+          - accepted_values:
+              values: ["North America", "Europe", "Asia Pacific"]
+      - name: company_type
+        description: Company size classification
+        tests:
+          - accepted_values:
+              values: ["Enterprise", "Mid-Market", "SMB"]
+      - name: tier
+        description: Account tier
+        tests:
+          - accepted_values:
+              values: ["Tier 1", "Tier 2", "Tier 3"]
+
+  - name: stg_sfdc__opportunity
+    description: Staged Salesforce opportunity data
+    columns:
+      - name: opportunity_id
+        description: Primary key for opportunities
+        tests:
+          - unique
+          - not_null
+      - name: account_id
+        description: Foreign key to accounts
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_sfdc__account')
+              field: account_id
+      - name: type
+        description: Opportunity type
+        tests:
+          - accepted_values:
+              values:
+                ["New Subscription", "Renewal", "Expansion", "Monthly Billing"]
+
+  - name: stg_sfdc__opportunity_line_item
+    description: Staged opportunity line items with validated date ranges
+    columns:
+      - name: opportunity_line_item_id
+        description: Primary key for opportunity line items
+        tests:
+          - unique
+          - not_null
+      - name: opportunity_id
+        description: Foreign key to opportunities
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_sfdc__opportunity')
+              field: opportunity_id
+      - name: product_family
+        description: Product family classification
+        tests:
+          - accepted_values:
+              values: ["License", "Add-on", "Services", "Other"]
+
+  - name: stg_stripe__subscriptions
+    description: Staged Stripe subscription data
+    columns:
+      - name: subscription_id
+        description: Primary key for subscriptions
+        tests:
+          - unique
+          - not_null
+      - name: status
+        description: Subscription status
+        tests:
+          - accepted_values:
+              values: ["active", "canceled"]
+
+  - name: stg_stripe__invoices
+    description: Staged Stripe invoice data
+    columns:
+      - name: invoice_id
+        description: Primary key for invoices
+        tests:
+          - unique
+          - not_null
+      - name: currency
+        description: Invoice currency
+        tests:
+          - accepted_values:
+              values: ["usd"]

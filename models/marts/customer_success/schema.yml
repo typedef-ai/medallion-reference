@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: fct_customer_health_score
+    description: |
+      Comprehensive customer health scoring combining financial, usage, and support metrics.
+      Health scores range from 0-100 with three tiers: Healthy (80+), At Risk (60-79), Critical (<60).
+    columns:
+      - name: month
+        description: Month of the health score calculation
+      - name: account_id
+        description: Account identifier
+        tests:
+          - not_null
+      - name: customer_id
+        description: Customer identifier (may be null for accounts without usage/support data)
+      - name: account_name
+        description: Name of the account
+      - name: geo
+        description: Geographic region of the account
+      - name: company_type
+        description: Type of company
+      - name: tier
+        description: Account tier
+      - name: financial_health_score
+        description: Financial health component (0-30 points) based on ARR growth
+      - name: usage_health_score
+        description: Usage health component (0-40 points) based on engagement rate
+      - name: support_health_score
+        description: Support health component (0-30 points) based on satisfaction and ticket priority
+      - name: total_health_score
+        description: Overall health score (0-100 points)
+      - name: health_tier
+        description: Health tier classification (Healthy, At Risk, Critical)
+      - name: arr
+        description: Current month ARR
+      - name: arr_change
+        description: Month-over-month ARR change
+      - name: total_events
+        description: Total usage events in the month
+      - name: engagement_rate_30d_pct
+        description: Percentage of active users engaged in last 30 days
+      - name: dormant_users
+        description: Number of users who haven't logged in for 90+ days
+      - name: total_tickets
+        description: Total support tickets in the month
+      - name: avg_satisfaction_score
+        description: Average satisfaction score across all tickets

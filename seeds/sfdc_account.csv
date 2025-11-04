@@ -1,0 +1,151 @@
+account_id,parent_account_id,account_name,geo,company_type,tier,billing_country
+ACC001,,Acme Corporation,North America,Enterprise,Tier 1,USA
+ACC002,ACC001,Acme East Division,North America,Enterprise,Tier 1,USA
+ACC003,,GlobalTech Inc,Europe,Enterprise,Tier 1,UK
+ACC004,,TechStart LLC,North America,SMB,Tier 3,USA
+ACC005,,DataCorp Solutions,Asia Pacific,Mid-Market,Tier 2,Singapore
+ACC006,ACC003,GlobalTech Germany,Europe,Enterprise,Tier 1,Germany
+ACC007,,CloudNine Systems,North America,Mid-Market,Tier 2,Canada
+ACC008,,RetailPro Limited,Europe,SMB,Tier 3,France
+ACC009,,FinServe Group,North America,Enterprise,Tier 1,USA
+ACC010,,MobileTech Partners,Asia Pacific,SMB,Tier 3,Australia
+ACC011,,SecureBank AG,Europe,Enterprise,Tier 1,Switzerland
+ACC012,ACC001,Acme West Division,North America,Enterprise,Tier 1,USA
+ACC013,,HealthCare Analytics,North America,Mid-Market,Tier 2,USA
+ACC014,,EduPlatform Inc,Europe,SMB,Tier 3,UK
+ACC015,,LogiChain Solutions,Asia Pacific,Mid-Market,Tier 2,Japan
+ACC016,,MediaStream Corp,North America,Mid-Market,Tier 2,USA
+ACC017,,AgriTech Innovations,Europe,SMB,Tier 3,Netherlands
+ACC018,,AutoManufacture Co,Asia Pacific,Enterprise,Tier 1,South Korea
+ACC019,,EnergyGrid Systems,North America,Enterprise,Tier 1,USA
+ACC020,,InsureTech Partners,Europe,Mid-Market,Tier 2,Ireland
+ACC021,,MediaOps Limited,Europe,Mid-Market,Tier 1,Sweden
+ACC022,,DigitalMedia Hub Limited,Europe,Enterprise,Tier 1,Germany
+ACC023,,BankTech Solutions GmbH,Europe,SMB,Tier 3,Spain
+ACC024,,MerchantFlow Solutions,Europe,Mid-Market,Tier 1,Poland
+ACC025,,CreditLine Systems Associates,North America,SMB,Tier 2,USA
+ACC026,,UtilityMetrics Group,Europe,Mid-Market,Tier 1,UK
+ACC027,,GridOps Pro Group,North America,Mid-Market,Tier 2,Mexico
+ACC028,,StreamingData Associates,North America,Mid-Market,Tier 1,Canada
+ACC029,,MerchantFlow GmbH,Asia Pacific,Mid-Market,Tier 1,India
+ACC030,,SupplyChain Pro Technologies,Europe,SMB,Tier 2,Netherlands
+ACC031,ACC002,LabResults Pro Corporation,North America,Mid-Market,Tier 2,Canada
+ACC032,,CustomerData Inc Associates,Europe,Mid-Market,Tier 1,Sweden
+ACC033,,GridOps Pro Associates,North America,SMB,Tier 2,Canada
+ACC034,,LabResults Pro LLC,Europe,Enterprise,Tier 1,Poland
+ACC035,,NetCore GmbH,Europe,SMB,Tier 2,Poland
+ACC036,,BankTech Solutions Limited,North America,SMB,Tier 3,Canada
+ACC037,,WealthWise Limited,North America,Enterprise,Tier 1,USA
+ACC038,,QualityTrack Systems Systems,North America,Enterprise,Tier 1,Mexico
+ACC039,ACC009,CustomerData Inc Solutions,North America,SMB,Tier 3,Canada
+ACC040,,UtilityMetrics Technologies,Europe,Mid-Market,Tier 1,Netherlands
+ACC041,,EnergyFlow Systems Associates,Europe,SMB,Tier 3,Spain
+ACC042,,AudienceTrack Co,North America,SMB,Tier 3,Canada
+ACC043,,ManufactureTech LLC,North America,SMB,Tier 3,USA
+ACC044,ACC006,DataFlow Associates,Europe,Mid-Market,Tier 2,Germany
+ACC045,,CustomerData Inc Co,North America,SMB,Tier 3,Canada
+ACC046,ACC034,PharmaTech AG,Europe,SMB,Tier 3,Netherlands
+ACC047,,PharmaTech Co,North America,Enterprise,Tier 1,Canada
+ACC048,,AssemblyLine Analytics Limited,Europe,SMB,Tier 3,UK
+ACC049,,BroadcastPro Solutions,North America,SMB,Tier 3,Canada
+ACC050,,StudentData Systems GmbH,Europe,Mid-Market,Tier 1,UK
+ACC051,,HealthTrack Solutions Corp,Europe,Enterprise,Tier 1,Netherlands
+ACC052,,AssemblyLine Analytics Solutions,Europe,SMB,Tier 3,Spain
+ACC053,,PowerGrid Analytics Systems,North America,Mid-Market,Tier 2,Canada
+ACC054,,PaymentStream Solutions,North America,Mid-Market,Tier 2,Canada
+ACC055,,TrainingTrack Limited,Europe,SMB,Tier 3,Germany
+ACC056,,LearningMetrics Partners,North America,Enterprise,Tier 1,Mexico
+ACC057,,StoreFront Solutions LLC,North America,Mid-Market,Tier 1,USA
+ACC058,,CleanEnergy Hub Solutions,North America,Enterprise,Tier 1,Canada
+ACC059,,MediaMetrics AG,Asia Pacific,SMB,Tier 3,Australia
+ACC060,ACC038,EduTech Solutions AG,North America,Mid-Market,Tier 1,USA
+ACC061,,Campus Analytics Associates,North America,Mid-Market,Tier 2,Canada
+ACC062,ACC012,HealthTrack Solutions Associates,North America,Enterprise,Tier 1,Canada
+ACC063,,InventoryTrack Group,North America,Mid-Market,Tier 2,Canada
+ACC064,,SystemPro Co,North America,SMB,Tier 3,Mexico
+ACC065,,PaymentStream Associates,North America,SMB,Tier 3,Mexico
+ACC066,,AudienceTrack Associates,Europe,Enterprise,Tier 1,France
+ACC067,,RetailMetrics GmbH,Europe,Enterprise,Tier 1,France
+ACC068,,E-Commerce Hub Solutions,North America,SMB,Tier 2,Canada
+ACC069,,EduTech Solutions Associates,Europe,SMB,Tier 2,Poland
+ACC070,,MedFlow Group,Europe,Enterprise,Tier 1,Netherlands
+ACC071,ACC051,ManufactureTech Associates,Europe,Mid-Market,Tier 1,Switzerland
+ACC072,,LearningMetrics GmbH,North America,SMB,Tier 2,Mexico
+ACC073,,ClinicalData Systems Technologies,North America,Mid-Market,Tier 1,Canada
+ACC074,,CleanEnergy Hub Solutions,Europe,SMB,Tier 2,Sweden
+ACC075,ACC037,Digital Forge GmbH,North America,Enterprise,Tier 1,Canada
+ACC076,,HealthTrack Solutions GmbH,Europe,Mid-Market,Tier 2,Switzerland
+ACC077,ACC003,InvestTech Inc,Europe,Enterprise,Tier 1,Spain
+ACC078,,WellnessData Group,North America,SMB,Tier 3,Canada
+ACC079,,WellnessData Systems,North America,SMB,Tier 3,Mexico
+ACC080,ACC022,E-Commerce Hub Corporation,Europe,Enterprise,Tier 1,Germany
+ACC081,ACC009,AcademicHub Inc,North America,Enterprise,Tier 1,Mexico
+ACC082,,HealthFirst Inc,North America,SMB,Tier 3,Mexico
+ACC083,,PowerGrid Analytics Group,North America,SMB,Tier 3,Canada
+ACC084,,BroadcastPro Technologies,Europe,SMB,Tier 2,Spain
+ACC085,,StoreFront Solutions GmbH,North America,SMB,Tier 3,USA
+ACC086,,PowerGrid Analytics Co,North America,Mid-Market,Tier 2,USA
+ACC087,,ManufactureTech Associates,North America,Enterprise,Tier 1,Canada
+ACC088,ACC038,PharmaTech GmbH,North America,SMB,Tier 3,USA
+ACC089,,ManufactureTech AG,Europe,SMB,Tier 2,Netherlands
+ACC090,,RetailOps Solutions,North America,Mid-Market,Tier 1,USA
+ACC091,,UtilityMetrics Technologies,North America,SMB,Tier 3,USA
+ACC092,,DataFlow GmbH,Europe,Enterprise,Tier 1,Sweden
+ACC093,,DataFlow Co,Europe,SMB,Tier 3,Sweden
+ACC094,,CourseFlow Limited,Europe,Mid-Market,Tier 1,UK
+ACC095,,eLearning Pro Inc,Europe,SMB,Tier 3,France
+ACC096,,MediaOps Solutions,Europe,Enterprise,Tier 1,Ireland
+ACC097,,MediCare Analytics Co,Europe,SMB,Tier 3,Switzerland
+ACC098,,PublisherTech Limited,North America,SMB,Tier 3,Mexico
+ACC099,,NewsFlow Systems Associates,Asia Pacific,SMB,Tier 2,New Zealand
+ACC100,,AppMakers Corporation,Europe,Mid-Market,Tier 2,Switzerland
+ACC101,ACC019,LearningMetrics Group,North America,Mid-Market,Tier 2,USA
+ACC102,ACC001,ContentStream Limited,North America,SMB,Tier 3,Mexico
+ACC103,,ProductionHub Inc,Asia Pacific,Mid-Market,Tier 1,New Zealand
+ACC104,,PharmaTech Corp,Europe,SMB,Tier 2,UK
+ACC105,ACC047,ManufactureTech Partners,North America,Mid-Market,Tier 1,Mexico
+ACC106,ACC018,CodeCraft AG,Asia Pacific,Mid-Market,Tier 2,Japan
+ACC107,,CodeCraft Corporation,Europe,SMB,Tier 3,Switzerland
+ACC108,,AssetTrack Corporation,North America,SMB,Tier 3,USA
+ACC109,,FinanceHub Group,North America,Enterprise,Tier 1,Mexico
+ACC110,,eLearning Pro Associates,North America,SMB,Tier 3,USA
+ACC111,ACC018,POS Systems Pro Inc,Asia Pacific,Enterprise,Tier 1,Australia
+ACC112,,FactoryFlow Corporation,North America,Mid-Market,Tier 2,USA
+ACC113,,StoreFront Solutions Inc,North America,SMB,Tier 2,Canada
+ACC114,,SchoolOps Technologies,Europe,Enterprise,Tier 1,Netherlands
+ACC115,,NetCore Inc,Europe,SMB,Tier 3,France
+ACC116,,ByteWorks Limited,North America,Mid-Market,Tier 2,USA
+ACC117,,MakerSpace Co,Europe,Mid-Market,Tier 2,Spain
+ACC118,,ContentStream Corporation,North America,Mid-Market,Tier 2,Mexico
+ACC119,,ContentStream LLC,North America,Mid-Market,Tier 2,USA
+ACC120,,AssemblyLine Analytics Associates,North America,Mid-Market,Tier 2,Mexico
+ACC121,,FinanceHub Technologies,North America,Mid-Market,Tier 2,Canada
+ACC122,,StoreFront Solutions LLC,Europe,Mid-Market,Tier 2,Netherlands
+ACC123,ACC022,QualityTrack Systems Group,Europe,Enterprise,Tier 1,UK
+ACC124,,AudienceTrack Inc,Europe,SMB,Tier 2,Switzerland
+ACC125,ACC075,MediaOps AG,North America,Enterprise,Tier 1,Mexico
+ACC126,,EnergyTrack Partners,Europe,Enterprise,Tier 1,Sweden
+ACC127,,Digital Forge Solutions,Europe,SMB,Tier 2,Netherlands
+ACC128,ACC081,AudienceTrack Corporation,North America,Mid-Market,Tier 1,Canada
+ACC129,ACC062,TeacherTech Corp,North America,SMB,Tier 3,Canada
+ACC130,,Campus Analytics Technologies,North America,SMB,Tier 3,USA
+ACC131,,PowerOps Technologies,North America,Mid-Market,Tier 1,Canada
+ACC132,,ProductionMetrics Technologies,North America,Mid-Market,Tier 2,Mexico
+ACC133,,TeacherTech Partners,North America,Mid-Market,Tier 1,USA
+ACC134,,ProductionHub GmbH,Europe,Mid-Market,Tier 1,Netherlands
+ACC135,,EnergyFlow Systems Technologies,North America,Mid-Market,Tier 1,Mexico
+ACC136,ACC037,DevOps Solutions Limited,North America,Mid-Market,Tier 1,Mexico
+ACC137,,RenewableData Corp,Europe,SMB,Tier 3,Switzerland
+ACC138,,SolarMetrics Solutions,Asia Pacific,Enterprise,Tier 1,India
+ACC139,,Campus Analytics AG,Asia Pacific,SMB,Tier 3,South Korea
+ACC140,,ClinicalData Systems GmbH,Europe,Mid-Market,Tier 2,France
+ACC141,,CreditLine Systems GmbH,Europe,Mid-Market,Tier 2,UK
+ACC142,,FinanceHub Associates,North America,Mid-Market,Tier 1,Mexico
+ACC143,,Campus Analytics Partners,North America,Mid-Market,Tier 1,USA
+ACC144,,DigitalMedia Hub Systems,Europe,Mid-Market,Tier 2,Spain
+ACC145,,DataFlow Co,North America,Mid-Market,Tier 2,USA
+ACC146,,E-Commerce Hub Technologies,North America,SMB,Tier 3,Canada
+ACC147,,SolarMetrics LLC,North America,Mid-Market,Tier 2,Canada
+ACC148,,POS Systems Pro Limited,North America,SMB,Tier 2,Canada
+ACC149,,RenewableData Associates,Europe,Mid-Market,Tier 1,Switzerland
+ACC150,,MakerSpace Partners,Europe,Mid-Market,Tier 1,UK

@@ -1,0 +1,82 @@
+name: "medallion_reference"
+version: "1.0.0"
+config-version: 2
+
+profile: "medallion_reference"
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  medallion_reference:
+    +materialized: view
+
+    staging:
+      +materialized: view
+      +schema: staging
+
+    intermediate:
+      +materialized: view
+      +schema: intermediate
+      arr:
+        +materialized: table
+      pipeline:
+        +materialized: view
+      billing:
+        +materialized: view
+
+    marts:
+      +materialized: table
+      +schema: marts
+      finance:
+        +materialized: table
+
+seeds:
+  medallion_reference:
+    +schema: staging
+    sfdc_opportunity:
+      +column_types:
+        is_won: varchar
+        is_closed: varchar
+        license_start_date: date
+        license_end_date: date
+        created_date: date
+        close_date: date
+    stripe_invoices:
+      +column_types:
+        invoice_id: varchar
+        customer_id: varchar
+        amount_due: number
+        currency: varchar
+        created: date
+        paid: varchar
+        status: varchar
+    stripe_subscriptions:
+      +column_types:
+        current_period_start: date
+        current_period_end: date
+    payment_methods:
+      +column_types:
+        is_primary: varchar
+        created_date: date
+        expiry_date: date
+        last_used_date: date
+    user_licenses:
+      +column_types:
+        activated_date: date
+        last_login_date: date
+    support_tickets:
+      +column_types:
+        created_date: date
+        resolved_date: date
+    product_usage_events:
+      +column_types:
+        event_date: date

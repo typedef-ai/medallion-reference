@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: fct_support_metrics_monthly
+    description: Monthly support ticket metrics aggregated by account
+    columns:
+      - name: month
+        description: Month of tickets (first day of month)
+      - name: account_id
+        description: Account identifier
+      - name: customer_id
+        description: Customer identifier
+      - name: account_name
+        description: Name of the account
+      - name: total_tickets
+        description: Total number of tickets created in the month
+      - name: high_priority_tickets
+        description: Number of high priority tickets
+      - name: medium_priority_tickets
+        description: Number of medium priority tickets
+      - name: low_priority_tickets
+        description: Number of low priority tickets
+      - name: bug_tickets
+        description: Number of bug report tickets
+      - name: feature_request_tickets
+        description: Number of feature request tickets
+      - name: training_tickets
+        description: Number of training tickets
+      - name: billing_tickets
+        description: Number of billing tickets
+      - name: avg_resolution_hours
+        description: Average time to resolve tickets in hours
+      - name: avg_satisfaction_score
+        description: Average customer satisfaction score (1-5)
+      - name: satisfaction_rate_pct
+        description: Percentage of tickets with satisfaction score >= 4
+      - name: tickets_per_1k_arr
+        description: Number of tickets per $1,000 of ARR

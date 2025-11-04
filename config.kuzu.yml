@@ -1,0 +1,18 @@
+# Lineage Backend Configuration (Graph Database)
+lineage:
+  backend: kuzu
+  db_path: ./.lineage_storage/lineage.kuzu
+
+  population:
+    model: google/gemini-2.5-flash
+    max_semantic_workers: 64
+    max_profiling_workers: 32
+    enable_semantic: false
+    enable_clustering: true
+    enable_profiling: true
+    enable_semantic_views: true
+memory:
+  backend: kuzu
+  storage_dir: ./.lineage_storage
+  default_org_id: cloudmetrics-inc # Organization ID for shared memory across sessions
+  default_user_id: brandon # User ID for personal memory across sessions

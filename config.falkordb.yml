@@ -1,0 +1,25 @@
+# Lineage Backend Configuration (Graph Database)
+lineage:
+  backend: falkordb
+  host: localhost
+  port: 6379
+  username: ""
+  password: ""
+  graph_name: medallion-reference
+
+  population:
+    model: google/gemini-2.5-flash
+    max_semantic_workers: 64
+    max_profiling_workers: 32
+    enable_semantic: true
+    enable_clustering: true
+    enable_profiling: true
+    enable_semantic_views: true
+memory:
+  enabled: true
+  backend: falkordb
+  host: localhost
+  port: 6379
+  username: ""
+  password: ""
+  default_org_id: cloudmetrics-inc

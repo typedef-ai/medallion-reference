@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: stg_product__usage_events
+    description: Cleaned product usage events from raw seed data
+    columns:
+      - name: event_id
+        description: Unique identifier for each usage event
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: Customer associated with this event
+      - name: account_id
+        description: Account associated with this event
+      - name: event_date
+        description: Date the event occurred
+      - name: event_type
+        description: Type of event (login, report_create, api_call, etc.)
+      - name: user_count
+        description: Number of users involved in this event
+      - name: gb_processed
+        description: Gigabytes of data processed during this event
+      - name: api_calls
+        description: Number of API calls made during this event
+      - name: feature_name
+        description: Name of the feature being used
+
+  - name: stg_product__user_licenses
+    description: Cleaned user license data showing user access and activity
+    columns:
+      - name: user_license_id
+        description: Unique identifier for each user license
+        tests:
+          - unique
+          - not_null
+      - name: account_id
+        description: Account this user belongs to
+      - name: customer_id
+        description: Customer this user belongs to
+      - name: user_email
+        description: User's email address
+      - name: user_role
+        description: User's role (Admin, Power User, Viewer)
+      - name: activated_date
+        description: Date the license was activated
+      - name: last_login_date
+        description: Date of the user's last login
+      - name: status
+        description: License status (active, inactive)

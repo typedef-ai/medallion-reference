@@ -1,0 +1,9 @@
+select
+    cast(account_id as varchar) as account_id,
+    cast(parent_account_id as varchar) as parent_account_id,
+    cast(account_name as varchar) as account_name,
+    cast(geo as varchar) as geo,
+    cast(company_type as varchar) as company_type,
+    cast(tier as varchar) as tier,
+    cast(billing_country as varchar) as billing_country
+from {{ ref('sfdc_account') }}

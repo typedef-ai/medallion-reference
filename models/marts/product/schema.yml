@@ -1,0 +1,63 @@
+version: 2
+
+models:
+  - name: fct_product_usage_monthly
+    description: Monthly aggregated product usage metrics by account
+    columns:
+      - name: usage_month
+        description: Month of usage (first day of month)
+      - name: account_id
+        description: Account identifier
+      - name: customer_id
+        description: Customer identifier
+      - name: account_name
+        description: Name of the account
+      - name: industry
+        description: Account industry
+      - name: segment
+        description: Account segment (Enterprise, Mid-Market, SMB)
+      - name: total_events
+        description: Total number of usage events in the month
+      - name: login_events
+        description: Number of login events
+      - name: report_events
+        description: Number of report creation events
+      - name: api_events
+        description: Number of API call events
+      - name: total_user_sessions
+        description: Total user sessions across all events
+      - name: total_gb_processed
+        description: Total gigabytes processed
+      - name: total_api_calls
+        description: Total API calls made
+      - name: unique_features_used
+        description: Number of unique features used
+      - name: active_users
+        description: Number of active users
+      - name: users_active_last_30d
+        description: Number of users active in the last 30 days
+      - name: engagement_rate_30d_pct
+        description: Percentage of active users who logged in within 30 days
+
+  - name: dim_feature
+    description: Dimension table containing product feature metadata
+    columns:
+      - name: feature_name
+        description: Name of the feature
+        tests:
+          - unique
+          - not_null
+      - name: feature_category
+        description: Category of the feature (Data Management, Reporting, Analytics, etc.)
+      - name: feature_tier
+        description: Feature tier (Premium, Standard)
+      - name: accounts_using_feature
+        description: Number of accounts using this feature
+      - name: customers_using_feature
+        description: Number of customers using this feature
+      - name: total_events
+        description: Total usage events for this feature
+      - name: first_usage_date
+        description: First date this feature was used
+      - name: last_usage_date
+        description: Most recent date this feature was used
