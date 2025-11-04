@@ -23,3 +23,34 @@ memory:
   username: ""
   password: ""
   default_org_id: cloudmetrics-inc
+
+# Data Backend Configuration (Data Warehouse)
+data:
+  backend: snowflake
+  account: ${SNOWFLAKE_ACCOUNT}
+  user: ${SNOWFLAKE_USER}
+  database: ${SNOWFLAKE_DATABASE}
+  schema_name: ${SNOWFLAKE_SCHEMA}
+  private_key_path: ${SNOWFLAKE_PRIVATE_KEY_PATH}
+  role: ${SNOWFLAKE_ROLE}
+  warehouse: ${SNOWFLAKE_WAREHOUSE}
+
+ticket:
+  enabled: true
+  backend: filesystem
+  base_path: ./tickets
+
+git:
+  enabled: false
+  working_directory: ${GITHUB_DBT_PROJECT_LOCAL_PATH}
+  repo_url: ${GITHUB_DBT_PROJECT_URL}
+
+# Agent Runtime Configuration
+# This controls the LLM model used for interactive queries in the web UI and CLI
+agent:
+  analyst:
+    model: anthropic:claude-haiku-4-5
+  data_engineer:
+    model: anthropic:claude-sonnet-4-5
+  quality:
+    model: anthropic:claude-haiku-4-5
