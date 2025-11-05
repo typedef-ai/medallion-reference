@@ -15,10 +15,7 @@ CREATE OR REPLACE SEMANTIC VIEW sv_arr_reporting
       COMMENT = 'Company segment (Enterprise, Mid-Market, SMB)',
     arr_facts.tier AS tier
       WITH SYNONYMS = ('tier level', 'customer tier')
-      COMMENT = 'Customer tier classification (Tier 1, 2, 3)',
-    arr_facts.billing_country AS billing_country
-      WITH SYNONYMS = ('country', 'billing country', 'account country')
-      COMMENT = 'Country where the account is billed'
+      COMMENT = 'Customer tier classification (Tier 1, 2, 3)'
   )
   METRICS (
     arr_facts.ending_arr AS SUM(month_ending_arr)

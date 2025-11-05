@@ -47,8 +47,7 @@ ticket:
 
 git:
   enabled: false
-  working_directory: ${GITHUB_DBT_PROJECT_LOCAL_PATH}
-  repo_url: ${GITHUB_DBT_PROJECT_URL}
+  working_directory: ""
 
 # Agent Runtime Configuration
 # This controls the LLM model used for interactive queries in the web UI and CLI
