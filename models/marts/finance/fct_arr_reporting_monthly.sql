@@ -18,8 +18,7 @@ select
     deltas.net_new_arr,
     acc.geo,
     acc.company_type,
-    acc.tier,
-    acc.billing_country
+    acc.tier
 from {{ ref('int_account_monthly_deltas') }} deltas
 left join {{ ref('stg_sfdc__account') }} acc
     on acc.account_id = deltas.account_id
