@@ -4,3 +4,7 @@ dbt_packages/
 logs/
 reports/
 tickets/
+.user.yml
+
+.env
+.DS_Store
