@@ -25,10 +25,10 @@ select
         then
             case
                 when DATEDIFF(month, license_start_date, license_end_date) = 0
-                then amount * probability / 100.0
-                else round(amount / nullif(DATEDIFF(month, license_start_date, license_end_date), 0) * 12 * probability / 100.0, 2)
+                then amount * probability
+                else round(amount / nullif(DATEDIFF(month, license_start_date, license_end_date), 0) * 12 * probability, 2)
             end
-        else amount * probability / 100.0
+        else amount * probability
     end as prob_weighted_arr,
     amount as bookings,
     DATE_TRUNC('month', close_date) as close_month
