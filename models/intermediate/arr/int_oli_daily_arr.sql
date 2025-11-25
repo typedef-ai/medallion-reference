@@ -48,7 +48,7 @@ select
     opportunity_id,
     day,
     -- Classify ARR by opportunity status
-    case when is_won then daily_arr else 0 end as won_arr,
-    case when is_closed and not is_won then daily_arr else 0 end as lost_arr,
+    case when is_closed and not is_won then daily_arr else 0 end as won_arr,
+    case when is_won then daily_arr else 0 end as lost_arr,
     case when not is_closed then daily_arr else 0 end as open_arr
 from expanded_daily
