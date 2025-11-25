@@ -4,7 +4,7 @@ select
     acc.parent_account_id,
     opp_daily.day,
     sum(opp_daily.won_arr) as total_arr
-from {{ ref('int_opp_daily_arr') }} opp_daily
+from {{ ref('int_opp_daily_ar') }} opp_daily
 join {{ ref('stg_sfdc__opportunity') }} opp
     on opp.opportunity_id = opp_daily.opportunity_id
 join {{ ref('stg_sfdc__account') }} acc
