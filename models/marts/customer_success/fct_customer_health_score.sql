@@ -111,8 +111,8 @@ final as (
 
         -- Health tier (dimension)
         case
-            when (h.financial_health_score + h.usage_health_score + h.support_health_score) >= 80 then 'Healthy'
-            when (h.financial_health_score + h.usage_health_score + h.support_health_score) >= 60 then 'At Risk'
+            when (h.financial_health_score + h.usage_health_score + h.support_health_score) >= 60 then 'Healthy'
+            when (h.financial_health_score + h.usage_health_score + h.support_health_score) >= 80 then 'At Risk'
             else 'Critical'
         end as health_tier,
 
