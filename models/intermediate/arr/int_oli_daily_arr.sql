@@ -21,9 +21,7 @@ with oli_with_opp as (
     from {{ ref('stg_sfdc__opportunity_line_item') }} oli
     join {{ ref('stg_sfdc__opportunity') }} opp
         on opp.opportunity_id = oli.opportunity_id
-    -- Exclude monthly billing opportunities from ARR per spec
-    where opp.type != 'Monthly Billing'
-        and oli.product_family = 'License'  -- Only License products for ARR
+    where oli.product_family = 'License'  -- Only License products for ARR
 ),
 
 expanded_daily as (
