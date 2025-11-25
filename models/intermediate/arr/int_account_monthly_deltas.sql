@@ -34,9 +34,9 @@ month_aggregated as (
         parent_account_id,
         month_end,
         -- Previous month's ending ARR becomes this month's starting ARR
-        coalesce(lag(month_ending_arr) over (partition by account_id order by month_end), 0) as month_starting_arr,
+        lag(month_ending_arr) over (partition by account_id order by month_end) as month_starting_arr,
         month_ending_arr,
-        month_ending_arr - coalesce(lag(month_ending_arr) over (partition by account_id order by month_end), 0) as total_arr_delta
+        month_ending_arr - lag(month_ending_arr) over (partition by account_id order by month_end) as total_arr_delta
     from monthly_arr
 )
 
