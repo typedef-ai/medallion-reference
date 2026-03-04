@@ -37,7 +37,7 @@ expanded_daily as (
         oli.is_closed,
         dates.date_day as day,
         -- ARR formula: annualize the contract value
-        365.0 * oli.total_price / nullif(DATEDIFF(day, oli.start_date, oli.end_date) + 1, 0) as daily_arr
+        365.0 * oli.total_price / nullif(DATEDIFF('day', oli.start_date, oli.end_date) + 1, 0) as daily_arr
     from oli_with_opp oli
     join {{ ref('util__dates') }} dates
         on dates.date_day between oli.start_date and oli.end_date

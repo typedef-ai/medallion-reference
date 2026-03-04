@@ -58,7 +58,7 @@ seeds:
       +column_types:
         invoice_id: varchar
         customer_id: varchar
-        amount_due: number
+        amount_due: numeric
         currency: varchar
         created: date
         paid: varchar
