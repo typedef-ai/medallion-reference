@@ -1,0 +1,858 @@
+version: 2
+
+semantic_models:
+  - name: arr_reporting
+    description: Monthly ARR movements by account, geography, company type, and tier.
+    model: ref('fct_arr_reporting_monthly')
+    defaults:
+      agg_time_dimension: month_end
+    entities:
+      - name: arr_reporting_period
+        type: primary
+        expr: "concat(cast(account_id as varchar), '-', cast(month_end as varchar))"
+      - name: account
+        type: foreign
+        expr: account_id
+    dimensions:
+      - name: month_end
+        description: Month-end date for the ARR reporting period.
+        type: time
+        type_params:
+          time_granularity: month
+      - name: geo
+        description: Geographic region for the account.
+        type: categorical
+      - name: company_type
+        description: Company segment for the account.
+        type: categorical
+      - name: tier
+        description: Customer tier classification.
+        type: categorical
+    measures:
+      - name: ending_arr
+        description: Total ARR at month end.
+        agg: sum
+        expr: month_ending_arr
+      - name: net_new_arr
+        description: Net change in ARR from new, expansion, resurrection, contraction, and churn movements.
+        agg: sum
+      - name: new_arr
+        description: ARR from new customers.
+        agg: sum
+      - name: expansion_arr
+        description: ARR from customer growth and upsells.
+        agg: sum
+      - name: resurrection_arr
+        description: ARR from returning customers.
+        agg: sum
+      - name: contraction_arr
+        description: ARR lost from shrinking customers.
+        agg: sum
+      - name: churn_arr
+        description: ARR lost from churned customers.
+        agg: sum
+
+  - name: pipeline
+    description: Sales pipeline metrics by opportunity, stage, forecast category, and deal type.
+    model: ref('fct_pipeline')
+    defaults:
+      agg_time_dimension: close_month
+    entities:
+      - name: opportunity
+        type: primary
+        expr: opportunity_id
+      - name: account
+        type: foreign
+        expr: account_id
+    dimensions:
+      - name: close_month
+        description: Expected close month for the opportunity.
+        type: time
+        type_params:
+          time_granularity: month
+      - name: stage_name
+        description: Current sales stage for the opportunity.
+        type: categorical
+      - name: forecast_category
+        description: Forecast category for the opportunity.
+        type: categorical
+      - name: deal_type
+        description: Type of deal, such as new business, renewal, or expansion.
+        type: categorical
+    measures:
+      - name: arr
+        description: Total annual recurring revenue in pipeline.
+        agg: sum
+        expr: arr
+      - name: prob_weighted_arr
+        description: Probability-weighted ARR based on opportunity stage.
+        agg: sum
+        expr: prob_weighted_arr
+      - name: bookings
+        description: Total bookings value.
+        agg: sum
+        expr: bookings
+      - name: deal_count
+        description: Number of opportunities.
+        agg: count_distinct
+        expr: opportunity_id
+
+  - name: product_usage
+    description: Monthly product usage, feature adoption, and engagement metrics by account.
+    model: ref('fct_product_usage_monthly')
+    defaults:
+      agg_time_dimension: usage_month
+    entities:
+      - name: product_usage_period
+        type: primary
+        expr: "concat(cast(account_id as varchar), '-', coalesce(cast(customer_id as varchar), 'unknown'), '-', cast(usage_month as varchar))"
+      - name: account
+        type: foreign
+        expr: account_id
+      - name: customer
+        type: foreign
+        expr: customer_id
+    dimensions:
+      - name: usage_month
+        description: Month of product usage.
+        type: time
+        type_params:
+          time_granularity: month
+      - name: last_activity_date
+        description: Most recent activity date observed for the account.
+        type: time
+        type_params:
+          time_granularity: day
+      - name: account_name
+        description: Account name.
+        type: categorical
+      - name: geo
+        description: Geographic region for the account.
+        type: categorical
+      - name: company_type
+        description: Company segment for the account.
+        type: categorical
+      - name: tier
+        description: Customer tier classification.
+        type: categorical
+    measures:
+      - name: total_events
+        description: Total product usage events.
+        agg: sum
+      - name: login_events
+        description: Number of login events.
+        agg: sum
+      - name: report_events
+        description: Number of report creation events.
+        agg: sum
+      - name: api_events
+        description: Number of API event records.
+        agg: sum
+      - name: total_user_sessions
+        description: Total user sessions across usage events.
+        agg: sum
+      - name: total_gb_processed
+        description: Total gigabytes processed.
+        agg: sum
+      - name: total_api_calls
+        description: Total API calls made.
+        agg: sum
+      - name: unique_features_used
+        description: Average number of unique features used.
+        agg: average
+      - name: features_with_events
+        description: Average number of features with usage events.
+        agg: average
+      - name: total_feature_events
+        description: Total feature-specific usage events.
+        agg: sum
+      - name: active_users
+        description: Number of active users.
+        agg: sum
+      - name: users_active_last_30d
+        description: Number of users active in the last 30 days.
+        agg: sum
+      - name: dormant_users
+        description: Number of users who have not logged in for 90 or more days.
+        agg: sum
+      - name: engagement_rate_30d_pct
+        description: Average percentage of active users engaged in the last 30 days.
+        agg: average
+      - name: avg_days_since_last_login
+        description: Average days since last login.
+        agg: average
+
+  - name: feature_analytics
+    description: Feature-level adoption and usage metrics.
+    model: ref('dim_feature')
+    defaults:
+      agg_time_dimension: last_usage_date
+    entities:
+      - name: feature
+        type: primary
+        expr: feature_name
+    dimensions:
+      - name: feature_name
+        description: Product feature name.
+        type: categorical
+      - name: feature_category
+        description: Product feature category.
+        type: categorical
+      - name: feature_tier
+        description: Feature tier.
+        type: categorical
+      - name: first_usage_date
+        description: First date the feature was used.
+        type: time
+        type_params:
+          time_granularity: day
+      - name: last_usage_date
+        description: Most recent date the feature was used.
+        type: time
+        type_params:
+          time_granularity: day
+      - name: days_in_use
+        description: Number of days between first and latest observed usage.
+        type: categorical
+    measures:
+      - name: accounts_using_feature
+        description: Number of accounts using the feature.
+        agg: sum
+      - name: customers_using_feature
+        description: Number of customers using the feature.
+        agg: sum
+      - name: feature_total_events
+        description: Total usage events for the feature.
+        agg: sum
+        expr: total_events
+      - name: feature_total_api_calls
+        description: Total API calls associated with the feature.
+        agg: sum
+        expr: total_api_calls
+      - name: feature_total_gb_processed
+        description: Total gigabytes processed by the feature.
+        agg: sum
+        expr: total_gb_processed
+
+  - name: support_experience
+    description: Monthly support volume, resolution, and customer satisfaction metrics by account.
+    model: ref('fct_support_metrics_monthly')
+    defaults:
+      agg_time_dimension: support_month
+    entities:
+      - name: support_period
+        type: primary
+        expr: "concat(cast(account_id as varchar), '-', coalesce(cast(customer_id as varchar), 'unknown'), '-', cast(month as varchar))"
+      - name: account
+        type: foreign
+        expr: account_id
+      - name: customer
+        type: foreign
+        expr: customer_id
+    dimensions:
+      - name: support_month
+        description: Month of support activity.
+        expr: month
+        type: time
+        type_params:
+          time_granularity: month
+      - name: account_name
+        description: Account name.
+        type: categorical
+      - name: geo
+        description: Geographic region for the account.
+        type: categorical
+      - name: company_type
+        description: Company segment for the account.
+        type: categorical
+      - name: tier
+        description: Customer tier classification.
+        type: categorical
+    measures:
+      - name: total_tickets
+        description: Total support tickets created.
+        agg: sum
+      - name: high_priority_tickets
+        description: High priority support tickets.
+        agg: sum
+      - name: medium_priority_tickets
+        description: Medium priority support tickets.
+        agg: sum
+      - name: low_priority_tickets
+        description: Low priority support tickets.
+        agg: sum
+      - name: bug_tickets
+        description: Bug report tickets.
+        agg: sum
+      - name: feature_request_tickets
+        description: Feature request tickets.
+        agg: sum
+      - name: training_tickets
+        description: Training tickets.
+        agg: sum
+      - name: billing_tickets
+        description: Billing tickets.
+        agg: sum
+      - name: avg_resolution_hours
+        description: Average time to resolve tickets in hours.
+        agg: average
+      - name: satisfied_tickets
+        description: Tickets with satisfied responses.
+        agg: sum
+      - name: dissatisfied_tickets
+        description: Tickets with dissatisfied responses.
+        agg: sum
+      - name: avg_satisfaction_score
+        description: Average customer satisfaction score.
+        agg: average
+      - name: satisfaction_rate_pct
+        description: Average percentage of tickets with satisfaction score of 4 or higher.
+        agg: average
+      - name: high_priority_rate_pct
+        description: Average percentage of tickets marked high priority.
+        agg: average
+      - name: current_arr
+        description: Current ARR associated with support activity.
+        agg: sum
+      - name: tickets_per_1k_arr
+        description: Average number of support tickets per $1,000 of ARR.
+        agg: average
+
+  - name: customer_health
+    description: Monthly customer health scores combining ARR, usage, and support signals.
+    model: ref('fct_customer_health_score')
+    defaults:
+      agg_time_dimension: health_month
+    entities:
+      - name: customer_health_period
+        type: primary
+        expr: "concat(cast(account_id as varchar), '-', coalesce(cast(customer_id as varchar), 'unknown'), '-', cast(month as varchar))"
+      - name: account
+        type: foreign
+        expr: account_id
+      - name: customer
+        type: foreign
+        expr: customer_id
+    dimensions:
+      - name: health_month
+        description: Month of the health score calculation.
+        expr: month
+        type: time
+        type_params:
+          time_granularity: month
+      - name: account_name
+        description: Account name.
+        type: categorical
+      - name: geo
+        description: Geographic region for the account.
+        type: categorical
+      - name: company_type
+        description: Company segment for the account.
+        type: categorical
+      - name: tier
+        description: Customer tier classification.
+        type: categorical
+      - name: health_tier
+        description: "Health tier classification: Healthy, At Risk, or Critical."
+        type: categorical
+    measures:
+      - name: financial_health_score
+        description: Average financial health component score.
+        agg: average
+      - name: usage_health_score
+        description: Average usage health component score.
+        agg: average
+      - name: support_health_score
+        description: Average support health component score.
+        agg: average
+      - name: total_health_score
+        description: Average overall customer health score.
+        agg: average
+      - name: health_arr
+        description: Total ARR for health-scored accounts.
+        agg: sum
+        expr: arr
+      - name: prev_month_arr
+        description: Total previous month ARR for health-scored accounts.
+        agg: sum
+      - name: arr_change
+        description: Month-over-month ARR change.
+        agg: sum
+      - name: health_total_events
+        description: Total usage events for health-scored accounts.
+        agg: sum
+        expr: total_events
+      - name: health_unique_features_used
+        description: Average unique features used by health-scored accounts.
+        agg: average
+        expr: unique_features_used
+      - name: health_engagement_rate_30d_pct
+        description: Average engagement rate for health-scored accounts.
+        agg: average
+        expr: engagement_rate_30d_pct
+      - name: health_dormant_users
+        description: Total dormant users for health-scored accounts.
+        agg: sum
+        expr: dormant_users
+      - name: health_active_users
+        description: Total active users for health-scored accounts.
+        agg: sum
+        expr: active_users
+      - name: health_total_tickets
+        description: Total support tickets for health-scored accounts.
+        agg: sum
+        expr: total_tickets
+      - name: health_high_priority_tickets
+        description: Total high priority support tickets for health-scored accounts.
+        agg: sum
+        expr: high_priority_tickets
+      - name: health_avg_satisfaction_score
+        description: Average satisfaction score for health-scored accounts.
+        agg: average
+        expr: avg_satisfaction_score
+      - name: health_satisfaction_rate_pct
+        description: Average satisfaction rate for health-scored accounts.
+        agg: average
+        expr: satisfaction_rate_pct
+
+metrics:
+  - name: ending_arr
+    description: Total ARR at month end.
+    label: Ending ARR
+    type: simple
+    type_params:
+      measure: ending_arr
+
+  - name: net_new_arr
+    description: Net change in ARR.
+    label: Net New ARR
+    type: simple
+    type_params:
+      measure: net_new_arr
+
+  - name: new_arr
+    description: ARR from new customers.
+    label: New ARR
+    type: simple
+    type_params:
+      measure: new_arr
+
+  - name: expansion_arr
+    description: ARR from customer growth and upsells.
+    label: Expansion ARR
+    type: simple
+    type_params:
+      measure: expansion_arr
+
+  - name: resurrection_arr
+    description: ARR from returning customers.
+    label: Resurrection ARR
+    type: simple
+    type_params:
+      measure: resurrection_arr
+
+  - name: contraction_arr
+    description: ARR lost from shrinking customers.
+    label: Contraction ARR
+    type: simple
+    type_params:
+      measure: contraction_arr
+
+  - name: churn_arr
+    description: ARR lost from churned customers.
+    label: Churn ARR
+    type: simple
+    type_params:
+      measure: churn_arr
+
+  - name: arr
+    description: Total annual recurring revenue in pipeline.
+    label: ARR
+    type: simple
+    type_params:
+      measure: arr
+
+  - name: prob_weighted_arr
+    description: Probability-weighted ARR based on opportunity stage.
+    label: Probability-Weighted ARR
+    type: simple
+    type_params:
+      measure: prob_weighted_arr
+
+  - name: bookings
+    description: Total bookings value.
+    label: Bookings
+    type: simple
+    type_params:
+      measure: bookings
+
+  - name: deal_count
+    description: Number of opportunities.
+    label: Deal Count
+    type: simple
+    type_params:
+      measure: deal_count
+
+  - name: total_events
+    description: Total product usage events.
+    label: Total Events
+    type: simple
+    type_params:
+      measure: total_events
+
+  - name: login_events
+    description: Number of login events.
+    label: Login Events
+    type: simple
+    type_params:
+      measure: login_events
+
+  - name: report_events
+    description: Number of report creation events.
+    label: Report Events
+    type: simple
+    type_params:
+      measure: report_events
+
+  - name: api_events
+    description: Number of API event records.
+    label: API Events
+    type: simple
+    type_params:
+      measure: api_events
+
+  - name: total_user_sessions
+    description: Total user sessions across usage events.
+    label: Total User Sessions
+    type: simple
+    type_params:
+      measure: total_user_sessions
+
+  - name: total_gb_processed
+    description: Total gigabytes processed.
+    label: Total GB Processed
+    type: simple
+    type_params:
+      measure: total_gb_processed
+
+  - name: total_api_calls
+    description: Total API calls made.
+    label: Total API Calls
+    type: simple
+    type_params:
+      measure: total_api_calls
+
+  - name: unique_features_used
+    description: Average number of unique features used.
+    label: Unique Features Used
+    type: simple
+    type_params:
+      measure: unique_features_used
+
+  - name: features_with_events
+    description: Average number of features with usage events.
+    label: Features With Events
+    type: simple
+    type_params:
+      measure: features_with_events
+
+  - name: total_feature_events
+    description: Total feature-specific usage events.
+    label: Total Feature Events
+    type: simple
+    type_params:
+      measure: total_feature_events
+
+  - name: active_users
+    description: Number of active users.
+    label: Active Users
+    type: simple
+    type_params:
+      measure: active_users
+
+  - name: users_active_last_30d
+    description: Number of users active in the last 30 days.
+    label: Users Active Last 30d
+    type: simple
+    type_params:
+      measure: users_active_last_30d
+
+  - name: dormant_users
+    description: Number of dormant users.
+    label: Dormant Users
+    type: simple
+    type_params:
+      measure: dormant_users
+
+  - name: engagement_rate_30d_pct
+    description: Average engagement rate over the last 30 days.
+    label: Engagement Rate 30d %
+    type: simple
+    type_params:
+      measure: engagement_rate_30d_pct
+
+  - name: avg_days_since_last_login
+    description: Average days since last login.
+    label: Avg Days Since Last Login
+    type: simple
+    type_params:
+      measure: avg_days_since_last_login
+
+  - name: accounts_using_feature
+    description: Number of accounts using the feature.
+    label: Accounts Using Feature
+    type: simple
+    type_params:
+      measure: accounts_using_feature
+
+  - name: customers_using_feature
+    description: Number of customers using the feature.
+    label: Customers Using Feature
+    type: simple
+    type_params:
+      measure: customers_using_feature
+
+  - name: feature_total_events
+    description: Total usage events for the feature.
+    label: Feature Total Events
+    type: simple
+    type_params:
+      measure: feature_total_events
+
+  - name: feature_total_api_calls
+    description: Total API calls associated with the feature.
+    label: Feature Total API Calls
+    type: simple
+    type_params:
+      measure: feature_total_api_calls
+
+  - name: feature_total_gb_processed
+    description: Total gigabytes processed by the feature.
+    label: Feature Total GB Processed
+    type: simple
+    type_params:
+      measure: feature_total_gb_processed
+
+  - name: total_tickets
+    description: Total support tickets created.
+    label: Total Tickets
+    type: simple
+    type_params:
+      measure: total_tickets
+
+  - name: high_priority_tickets
+    description: High priority support tickets.
+    label: High Priority Tickets
+    type: simple
+    type_params:
+      measure: high_priority_tickets
+
+  - name: medium_priority_tickets
+    description: Medium priority support tickets.
+    label: Medium Priority Tickets
+    type: simple
+    type_params:
+      measure: medium_priority_tickets
+
+  - name: low_priority_tickets
+    description: Low priority support tickets.
+    label: Low Priority Tickets
+    type: simple
+    type_params:
+      measure: low_priority_tickets
+
+  - name: bug_tickets
+    description: Bug report tickets.
+    label: Bug Tickets
+    type: simple
+    type_params:
+      measure: bug_tickets
+
+  - name: feature_request_tickets
+    description: Feature request tickets.
+    label: Feature Request Tickets
+    type: simple
+    type_params:
+      measure: feature_request_tickets
+
+  - name: training_tickets
+    description: Training tickets.
+    label: Training Tickets
+    type: simple
+    type_params:
+      measure: training_tickets
+
+  - name: billing_tickets
+    description: Billing tickets.
+    label: Billing Tickets
+    type: simple
+    type_params:
+      measure: billing_tickets
+
+  - name: avg_resolution_hours
+    description: Average time to resolve tickets in hours.
+    label: Avg Resolution Hours
+    type: simple
+    type_params:
+      measure: avg_resolution_hours
+
+  - name: satisfied_tickets
+    description: Tickets with satisfied responses.
+    label: Satisfied Tickets
+    type: simple
+    type_params:
+      measure: satisfied_tickets
+
+  - name: dissatisfied_tickets
+    description: Tickets with dissatisfied responses.
+    label: Dissatisfied Tickets
+    type: simple
+    type_params:
+      measure: dissatisfied_tickets
+
+  - name: avg_satisfaction_score
+    description: Average customer satisfaction score.
+    label: Avg Satisfaction Score
+    type: simple
+    type_params:
+      measure: avg_satisfaction_score
+
+  - name: satisfaction_rate_pct
+    description: Average percentage of satisfied tickets.
+    label: Satisfaction Rate %
+    type: simple
+    type_params:
+      measure: satisfaction_rate_pct
+
+  - name: high_priority_rate_pct
+    description: Average percentage of tickets marked high priority.
+    label: High Priority Rate %
+    type: simple
+    type_params:
+      measure: high_priority_rate_pct
+
+  - name: current_arr
+    description: Current ARR associated with support activity.
+    label: Current ARR
+    type: simple
+    type_params:
+      measure: current_arr
+
+  - name: tickets_per_1k_arr
+    description: Average number of support tickets per $1,000 of ARR.
+    label: Tickets per 1k ARR
+    type: simple
+    type_params:
+      measure: tickets_per_1k_arr
+
+  - name: financial_health_score
+    description: Average financial health component score.
+    label: Financial Health Score
+    type: simple
+    type_params:
+      measure: financial_health_score
+
+  - name: usage_health_score
+    description: Average usage health component score.
+    label: Usage Health Score
+    type: simple
+    type_params:
+      measure: usage_health_score
+
+  - name: support_health_score
+    description: Average support health component score.
+    label: Support Health Score
+    type: simple
+    type_params:
+      measure: support_health_score
+
+  - name: total_health_score
+    description: Average overall customer health score.
+    label: Total Health Score
+    type: simple
+    type_params:
+      measure: total_health_score
+
+  - name: health_arr
+    description: Total ARR for health-scored accounts.
+    label: Health ARR
+    type: simple
+    type_params:
+      measure: health_arr
+
+  - name: prev_month_arr
+    description: Total previous month ARR for health-scored accounts.
+    label: Previous Month ARR
+    type: simple
+    type_params:
+      measure: prev_month_arr
+
+  - name: arr_change
+    description: Month-over-month ARR change for health-scored accounts.
+    label: ARR Change
+    type: simple
+    type_params:
+      measure: arr_change
+
+  - name: health_total_events
+    description: Total usage events for health-scored accounts.
+    label: Health Total Events
+    type: simple
+    type_params:
+      measure: health_total_events
+
+  - name: health_unique_features_used
+    description: Average unique features used by health-scored accounts.
+    label: Health Unique Features Used
+    type: simple
+    type_params:
+      measure: health_unique_features_used
+
+  - name: health_engagement_rate_30d_pct
+    description: Average engagement rate for health-scored accounts.
+    label: Health Engagement Rate 30d %
+    type: simple
+    type_params:
+      measure: health_engagement_rate_30d_pct
+
+  - name: health_dormant_users
+    description: Total dormant users for health-scored accounts.
+    label: Health Dormant Users
+    type: simple
+    type_params:
+      measure: health_dormant_users
+
+  - name: health_active_users
+    description: Total active users for health-scored accounts.
+    label: Health Active Users
+    type: simple
+    type_params:
+      measure: health_active_users
+
+  - name: health_total_tickets
+    description: Total support tickets for health-scored accounts.
+    label: Health Total Tickets
+    type: simple
+    type_params:
+      measure: health_total_tickets
+
+  - name: health_high_priority_tickets
+    description: Total high priority support tickets for health-scored accounts.
+    label: Health High Priority Tickets
+    type: simple
+    type_params:
+      measure: health_high_priority_tickets
+
+  - name: health_avg_satisfaction_score
+    description: Average satisfaction score for health-scored accounts.
+    label: Health Avg Satisfaction Score
+    type: simple
+    type_params:
+      measure: health_avg_satisfaction_score
+
+  - name: health_satisfaction_rate_pct
+    description: Average satisfaction rate for health-scored accounts.
+    label: Health Satisfaction Rate %
+    type: simple
+    type_params:
+      measure: health_satisfaction_rate_pct

@@ -1,6 +1,15 @@
 version: 2
 
 models:
+  - name: metricflow_time_spine
+    description: Daily time spine used by MetricFlow for time-based joins and aggregations.
+    time_spine:
+      standard_granularity_column: date_day
+    columns:
+      - name: date_day
+        description: Daily date column for MetricFlow time joins.
+        granularity: day
+
   - name: stg_sfdc__account
     description: Staged Salesforce account data with normalized types
     columns:

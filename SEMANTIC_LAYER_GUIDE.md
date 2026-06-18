@@ -8,10 +8,10 @@ This guide explains how to query the semantic layer metrics defined in this proj
 
 **Dimensions:**
 
-- `month_end` (time) - Month-end date
-- `geo` (categorical) - Geographic region (North America, Europe, Asia Pacific)
-- `company_type` (categorical) - Company size (Enterprise, Mid-Market, SMB)
-- `tier` (categorical) - Account tier (Tier 1, Tier 2, Tier 3)
+- `metric_time` (time) - Month-end reporting date
+- `arr_reporting_period__geo` (categorical) - Geographic region (North America, Europe, Asia Pacific)
+- `arr_reporting_period__company_type` (categorical) - Company size (Enterprise, Mid-Market, SMB)
+- `arr_reporting_period__tier` (categorical) - Account tier (Tier 1, Tier 2, Tier 3)
 
 **Measures:**
 
@@ -26,16 +26,93 @@ This guide explains how to query the semantic layer metrics defined in this proj
 
 **Dimensions:**
 
-- `close_month` (time) - Expected close month
-- `stage_name` (categorical) - Sales stage
-- `forecast_category` (categorical) - Forecast category
-- `deal_type` (categorical) - Type of deal
+- `metric_time` (time) - Expected close month
+- `opportunity__stage_name` (categorical) - Sales stage
+- `opportunity__forecast_category` (categorical) - Forecast category
+- `opportunity__deal_type` (categorical) - Type of deal
 
 **Measures:**
 
 - `arr` - Annual recurring revenue
 - `prob_weighted_arr` - Probability-weighted ARR
 - `bookings` - Total bookings value
+
+### 3. Product Usage (`product_usage`)
+
+**Dimensions:**
+
+- `metric_time` (time) - Month of product usage
+- `product_usage_period__last_activity_date` (time) - Most recent activity date
+- `product_usage_period__account_name` (categorical) - Account name
+- `product_usage_period__geo` (categorical) - Geographic region
+- `product_usage_period__company_type` (categorical) - Company size
+- `product_usage_period__tier` (categorical) - Account tier
+
+**Measures:**
+
+- `total_events` - Total product usage events
+- `active_users` - Active users
+- `unique_features_used` - Average number of unique features used
+- `engagement_rate_30d_pct` - Average 30-day engagement rate
+- `total_api_calls` - Total API calls
+- `total_gb_processed` - Total gigabytes processed
+
+### 4. Feature Analytics (`feature_analytics`)
+
+**Dimensions:**
+
+- `feature__feature_name` (categorical) - Product feature name
+- `feature__feature_category` (categorical) - Product feature category
+- `feature__feature_tier` (categorical) - Feature tier
+- `feature__first_usage_date` (time) - First feature usage date
+- `feature__last_usage_date` (time) - Most recent feature usage date
+
+**Measures:**
+
+- `accounts_using_feature` - Accounts using the feature
+- `customers_using_feature` - Customers using the feature
+- `feature_total_events` - Total feature usage events
+- `feature_total_api_calls` - Total API calls associated with the feature
+- `feature_total_gb_processed` - Total gigabytes processed by the feature
+
+### 5. Support Experience (`support_experience`)
+
+**Dimensions:**
+
+- `metric_time` (time) - Month of support activity
+- `support_period__account_name` (categorical) - Account name
+- `support_period__geo` (categorical) - Geographic region
+- `support_period__company_type` (categorical) - Company size
+- `support_period__tier` (categorical) - Account tier
+
+**Measures:**
+
+- `total_tickets` - Total support tickets
+- `high_priority_tickets` - High priority support tickets
+- `avg_resolution_hours` - Average resolution time
+- `avg_satisfaction_score` - Average customer satisfaction score
+- `satisfaction_rate_pct` - Average satisfaction rate
+- `tickets_per_1k_arr` - Average ticket intensity per $1,000 ARR
+
+### 6. Customer Health (`customer_health`)
+
+**Dimensions:**
+
+- `metric_time` (time) - Month of health score calculation
+- `customer_health_period__account_name` (categorical) - Account name
+- `customer_health_period__geo` (categorical) - Geographic region
+- `customer_health_period__company_type` (categorical) - Company size
+- `customer_health_period__tier` (categorical) - Account tier
+- `customer_health_period__health_tier` (categorical) - Health status
+
+**Measures:**
+
+- `total_health_score` - Average overall customer health score
+- `financial_health_score` - Average financial health component
+- `usage_health_score` - Average usage health component
+- `support_health_score` - Average support health component
+- `health_arr` - Total ARR for health-scored accounts
+- `health_total_tickets` - Total support tickets for health-scored accounts
 
 ## Query Methods
 
@@ -63,24 +140,39 @@ mf list dimensions --metrics ending_arr
 
 ```bash
 # Total ending ARR by month
-mf query --metrics ending_arr --group-by month_end
+mf query --metrics ending_arr --group-by metric_time
 
 # ARR metrics by geography
-mf query --metrics ending_arr,new_arr,churn_arr --group-by geo
+mf query --metrics ending_arr,new_arr,churn_arr --group-by arr_reporting_period__geo
 
 # ARR trends with filtering
 mf query --metrics ending_arr,net_new_arr \
-  --group-by month_end,company_type \
-  --where "company_type = 'Enterprise'" \
-  --order month_end
+  --group-by metric_time,arr_reporting_period__company_type \
+  --where "{{ Dimension('arr_reporting_period__company_type') }} = 'Enterprise'" \
+  --order metric_time
 
 # Pipeline by stage
-mf query --metrics prob_weighted_arr --group-by stage_name
+mf query --metrics prob_weighted_arr --group-by opportunity__stage_name
 
 # Pipeline by close month and forecast category
 mf query --metrics arr,prob_weighted_arr \
-  --group-by close_month,forecast_category \
-  --order close_month
+  --group-by metric_time,opportunity__forecast_category \
+  --order metric_time
+
+# Product engagement by month and geography
+mf query --metrics total_events,active_users,engagement_rate_30d_pct \
+  --group-by metric_time,product_usage_period__geo \
+  --order metric_time
+
+# Support burden by month and customer segment
+mf query --metrics total_tickets,avg_satisfaction_score,tickets_per_1k_arr \
+  --group-by metric_time,support_period__company_type \
+  --order metric_time
+
+# Customer health by tier
+mf query --metrics total_health_score,health_arr \
+  --group-by metric_time,customer_health_period__health_tier \
+  --order metric_time
 ```
 
 ### Method 2: Direct SQL Queries
