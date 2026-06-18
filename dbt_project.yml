@@ -42,6 +42,7 @@ models:
     semantic_views:
       +materialized: semantic_view
       +schema: marts
+      +enabled: "{{ target.type == 'snowflake' }}"
 
 seeds:
   medallion_reference:
