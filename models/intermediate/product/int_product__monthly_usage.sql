@@ -10,7 +10,7 @@ monthly_usage as (
     select
         account_id,
         customer_id,
-        date_trunc('month', event_date) as usage_month,
+        cast(date_trunc('month', event_date) as date) as usage_month,
         count(distinct event_id) as total_events,
         count(distinct case when event_type = 'login' then event_id end) as login_events,
         count(distinct case when event_type = 'report_create' then event_id end) as report_events,

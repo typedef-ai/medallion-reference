@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: int_product__monthly_usage
+    columns:
+      - name: usage_month
+        tests:
+          - column_type_is:
+              arguments:
+                expected_type: date
+
+  - name: int_product__feature_adoption
+    columns:
+      - name: usage_month
+        tests:
+          - column_type_is:
+              arguments:
+                expected_type: date
+
+  - name: int_support__monthly_metrics
+    columns:
+      - name: ticket_month
+        tests:
+          - column_type_is:
+              arguments:
+                expected_type: date
+
+  - name: int_pipeline_snapshot
+    columns:
+      - name: close_month
+        tests:
+          - column_type_is:
+              arguments:
+                expected_type: date
+
+  - name: util__dates
+    columns:
+      - name: date_day
+        tests:
+          - column_type_is:
+              arguments:
+                expected_type: date
