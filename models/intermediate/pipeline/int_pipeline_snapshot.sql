@@ -31,5 +31,5 @@ select
         else amount * probability / 100.0
     end as prob_weighted_arr,
     amount as bookings,
-    DATE_TRUNC('month', close_date) as close_month
+    cast(DATE_TRUNC('month', close_date) as date) as close_month
 from {{ ref('stg_sfdc__opportunity') }}

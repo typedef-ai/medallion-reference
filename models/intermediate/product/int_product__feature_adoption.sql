@@ -21,7 +21,7 @@ feature_usage as (
         u.account_id,
         u.customer_id,
         u.feature_name,
-        date_trunc('month', u.event_date) as usage_month,
+        cast(date_trunc('month', u.event_date) as date) as usage_month,
         count(distinct u.event_id) as feature_events,
         count(distinct u.event_date) as days_with_usage,
         sum(u.user_count) as total_users_engaged,

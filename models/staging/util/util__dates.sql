@@ -19,7 +19,7 @@
 {% elif target.type == 'duckdb' %}
     -- DuckDB version using generate_series
     select
-        date_day
+        cast(date_day as date) as date_day
     from generate_series(date '2023-11-01', date '2026-03-31', interval 1 day) as t(date_day)
 {% else %}
     -- Other databases using dbt_utils
