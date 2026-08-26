@@ -21,6 +21,13 @@
     select
         cast(date_day as date) as date_day
     from generate_series(date '2023-11-01', date '2026-03-31', interval 1 day) as t(date_day)
+{% elif target.type == 'bigquery' %}
+    -- BigQuery version using GENERATE_DATE_ARRAY. dbt_utils.date_spine's generic
+    -- path runs a compile-time query (get_intervals_between) that does not
+    -- resolve cleanly against the BigQuery adapter, so this warehouse gets its
+    -- own branch like Snowflake and DuckDB above, instead of the dbt_utils path.
+    select date_day
+    from unnest(generate_date_array('2023-11-01', '2026-03-31', interval 1 day)) as date_day
 {% else %}
     -- Other databases using dbt_utils
     {{ dbt_utils.date_spine(

@@ -13,9 +13,9 @@ select
         when license_start_date is not null and license_end_date is not null
         then
             case
-                when DATEDIFF('month', license_start_date, license_end_date) = 0
+                when {% if target.type == 'bigquery' %}date_diff(license_end_date, license_start_date, month){% else %}DATEDIFF('month', license_start_date, license_end_date){% endif %} = 0
                 then amount
-                else round(amount / nullif(DATEDIFF('month', license_start_date, license_end_date), 0) * 12, 2)
+                else round(amount / nullif({% if target.type == 'bigquery' %}date_diff(license_end_date, license_start_date, month){% else %}DATEDIFF('month', license_start_date, license_end_date){% endif %}, 0) * 12, 2)
             end
         else amount  -- Assume already ARR
     end as arr,
@@ -24,12 +24,12 @@ select
         when license_start_date is not null and license_end_date is not null
         then
             case
-                when DATEDIFF('month', license_start_date, license_end_date) = 0
+                when {% if target.type == 'bigquery' %}date_diff(license_end_date, license_start_date, month){% else %}DATEDIFF('month', license_start_date, license_end_date){% endif %} = 0
                 then amount * probability / 100.0
-                else round(amount / nullif(DATEDIFF('month', license_start_date, license_end_date), 0) * 12 * probability / 100.0, 2)
+                else round(amount / nullif({% if target.type == 'bigquery' %}date_diff(license_end_date, license_start_date, month){% else %}DATEDIFF('month', license_start_date, license_end_date){% endif %}, 0) * 12 * probability / 100.0, 2)
             end
         else amount * probability / 100.0
     end as prob_weighted_arr,
     amount as bookings,
-    cast(DATE_TRUNC('month', close_date) as date) as close_month
+    cast({% if target.type == 'bigquery' %}date_trunc(close_date, month){% else %}DATE_TRUNC('month', close_date){% endif %} as date) as close_month
 from {{ ref('stg_sfdc__opportunity') }}

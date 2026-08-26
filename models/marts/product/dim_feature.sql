@@ -52,7 +52,7 @@ final as (
         s.total_api_calls,
         s.first_usage_date,
         s.last_usage_date,
-        datediff('day', s.first_usage_date, s.last_usage_date) as days_in_use
+        {% if target.type == 'bigquery' %}date_diff(s.last_usage_date, s.first_usage_date, day){% else %}datediff('day', s.first_usage_date, s.last_usage_date){% endif %} as days_in_use
     from feature_stats s
     left join feature_categories c
         on s.feature_name = c.feature_name

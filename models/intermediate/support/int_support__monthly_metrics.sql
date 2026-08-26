@@ -6,7 +6,7 @@ monthly_metrics as (
     select
         account_id,
         customer_id,
-        cast(date_trunc('month', created_date) as date) as ticket_month,
+        cast({% if target.type == 'bigquery' %}date_trunc(created_date, month){% else %}date_trunc('month', created_date){% endif %} as date) as ticket_month,
         count(*) as total_tickets,
         count(case when priority = 'High' then 1 end) as high_priority_tickets,
         count(case when priority = 'Medium' then 1 end) as medium_priority_tickets,

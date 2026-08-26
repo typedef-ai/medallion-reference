@@ -21,8 +21,8 @@ user_activity as (
         ul.activated_date,
         ul.last_login_date,
         ul.status,
-        datediff('day', ul.last_login_date, current_date) as days_since_last_login,
-        datediff('day', ul.activated_date, current_date) as days_since_activation
+        {% if target.type == 'bigquery' %}date_diff(current_date, ul.last_login_date, day){% else %}datediff('day', ul.last_login_date, current_date){% endif %} as days_since_last_login,
+        {% if target.type == 'bigquery' %}date_diff(current_date, ul.activated_date, day){% else %}datediff('day', ul.activated_date, current_date){% endif %} as days_since_activation
     from user_licenses ul
 ),
 
