@@ -21,3 +21,19 @@ medallion_reference:
       path: ./medallion-reference.duckdb
       schema: main
       threads: 4
+
+    bigquery:
+      type: bigquery
+      method: oauth
+      # No default: this project id is expected to move (e.g. to the strategic
+      # partner's own GCP environment once that partnership formalizes), so it
+      # must never be baked in as a fallback. Export BIGQUERY_PROJECT before
+      # running against this target.
+      project: "{{ env_var('BIGQUERY_PROJECT') }}"
+      dataset: "{{ env_var('BIGQUERY_DATASET', 'medallion_reference') }}"
+      location: "{{ env_var('BIGQUERY_LOCATION', 'US') }}"
+      threads: 4
+      # Cost guard (TD-4985): every query this profile issues refuses to run
+      # over this many bytes. 100MB default per the interim GCP sanction;
+      # override only with a documented justification.
+      maximum_bytes_billed: "{{ env_var('BIGQUERY_MAXIMUM_BYTES_BILLED', 104857600) | int }}"

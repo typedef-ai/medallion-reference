@@ -2,6 +2,7 @@
 target/
 dbt_packages/
 logs/
+.venv/
 reports/
 tickets/
 .user.yml

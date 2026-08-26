@@ -49,28 +49,28 @@ seeds:
     +schema: staging
     sfdc_opportunity:
       +column_types:
-        is_won: varchar
-        is_closed: varchar
+        is_won: string
+        is_closed: string
         license_start_date: date
         license_end_date: date
         created_date: date
         close_date: date
     stripe_invoices:
       +column_types:
-        invoice_id: varchar
-        customer_id: varchar
+        invoice_id: string
+        customer_id: string
         amount_due: numeric
-        currency: varchar
+        currency: string
         created: date
-        paid: varchar
-        status: varchar
+        paid: string
+        status: string
     stripe_subscriptions:
       +column_types:
         current_period_start: date
         current_period_end: date
     payment_methods:
       +column_types:
-        is_primary: varchar
+        is_primary: string
         created_date: date
         expiry_date: date
         last_used_date: date
