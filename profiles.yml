@@ -25,7 +25,11 @@ medallion_reference:
     bigquery:
       type: bigquery
       method: oauth
-      project: "{{ env_var('BIGQUERY_PROJECT', 'brandon-495423') }}"
+      # No default: this project id is expected to move (e.g. to the strategic
+      # partner's own GCP environment once that partnership formalizes), so it
+      # must never be baked in as a fallback. Export BIGQUERY_PROJECT before
+      # running against this target.
+      project: "{{ env_var('BIGQUERY_PROJECT') }}"
       dataset: "{{ env_var('BIGQUERY_DATASET', 'medallion_reference') }}"
       location: "{{ env_var('BIGQUERY_LOCATION', 'US') }}"
       threads: 4
